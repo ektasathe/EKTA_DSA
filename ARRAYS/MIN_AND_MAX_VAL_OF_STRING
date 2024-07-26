@@ -1,4 +1,4 @@
-QUE3 : FIND MIN AND MAX VALUE OF STRING(HERE RETURN 2 VALUSE ONE TIME)
+QUE3 : FIND MIN AND MAX VALUE OF STRING(HERE RETURN 2 VALUSE ONE TIME) 
 ---------------------------------
 class Solution {
     public Pair<Long, Long> getMinMax(int[] arr) {
