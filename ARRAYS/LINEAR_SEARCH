@@ -1,6 +1,6 @@
 QUE1 : LINEAR SEARCH IN ARRAY 
 ------------------------------
-class Solution {
+class Solution { 
     static int search(int arr[], int x) {
         for (int i=0; i<arr.length; i++)     //for (int i : arr)
         {
