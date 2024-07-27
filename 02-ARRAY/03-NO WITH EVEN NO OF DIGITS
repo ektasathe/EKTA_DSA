@@ -7,7 +7,28 @@ Explanation: Only 1771 contains an even number of digits.
 CORNER CASE 1: NO CN BE NEGITIVE
 CORNER CASE 2 : NO CAN BE 0
 ==================================
+METHORD 4 : BEST METHORD USE = (int)(Math.log10(num)) + 1;
+
+class Solution {
+    public int findNumbers(int[] nums) 
+    {
+        int countEvenDigits = 0; // Counter for numbers with even number of digits
+      
+        // Iterate through each number in the array
+        for (int num : nums) 
+        {
+            int count = (int)(Math.log10(num)) + 1;
+            if(count % 2 ==0)
+            {
+                countEvenDigits++;
+            }
+        }
+        // Return the total count of numbers with even number of digits
+        return countEvenDigits;
+    }
+==================================
 METHORD 3 : convert each leement into string and get its legth
+TIME o(n*k) | n= no of elements in array, k is avg no of digits in number
 class Solution {
     public int findNumbers(int[] nums) 
     {
