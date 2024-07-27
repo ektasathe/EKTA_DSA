@@ -6,9 +6,9 @@ Output: 1
 Explanation: 
 Only 1771 contains an even number of digits.
 ----------------------------
+METHORD 1 : NO FUNCTION USED || TAKES 2 MILLI SEC 
 class Solution {
     public int findNumbers(int[] nums) {
-   //int n;
     int res=0;
     for (int i=0; i< nums.length ; i++)
     {
@@ -24,5 +24,41 @@ class Solution {
         }
     }
     return res;
+ }
 }
+-----------------------------
+METHORD 2 : use function  || TKAES 1 MILLISEC TIME
+
+class Solution {
+    public int findNumbers(int[] nums) 
+    {
+        int res=0;
+        for (int i=0; i< nums.length ; i++)
+        {
+       // int count = 0;
+       
+       /* while(nums[i]<0)
+        {
+            count++;
+            nums[i] = nums[i]/10;
+        }*/
+            int cnt =  digits(nums[i]);
+            if(cnt%2 == 0)
+            {
+                res++ ;
+            }
+        }
+    return res;
+    }
+//function to digits of a number
+    static int digits(int n)
+    {
+        int count =0 ;
+        while (n!=0)
+        {
+            count ++;
+            n = n/10;
+        }
+        return count;
+    }   
 }
