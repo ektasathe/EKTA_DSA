@@ -1,8 +1,10 @@
-/QUE 2:/no is prime or not
-//no should be dvisible by 1 and itself nd total no of divisors should be 2
-//time  > O(√n)
-class Solution{
-    static int isPrime(int N){
+#Find no is prime or not
+#no should be dvisible by 1 and itself nd total no of divisors should be 2
+#time  > O(√n)
+class Solution
+{
+    static int isPrime(int N)
+    {
         // code here
         if(N==1)
         {
