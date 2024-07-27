@@ -1,10 +1,31 @@
 https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/
 ----------------------------
 Given an array nums of integers, return how many of them contain an even number of digits.
-Input: nums = [555,901,482,1771]
-Output: 1 
-Explanation: 
-Only 1771 contains an even number of digits.
+Input: nums = [555,901,482,1771]  ||  Output: 1 
+Explanation: Only 1771 contains an even number of digits.
+
+CORNER CASE 1: NO CN BE NEGITIVE
+CORNER CASE 2 : NO CAN BE 0
+==================================
+METHORD 3 : convert each leement into string and get its legth
+class Solution {
+    public int findNumbers(int[] nums) 
+    {
+        int countEvenDigits = 0; // Counter for numbers with even number of digits
+      
+        // Iterate through each number in the array
+        for (int num : nums) 
+        {
+            // Check if the length of the number's string representation is even
+            if (String.valueOf(num).length() % 2 == 0) {
+                countEvenDigits++; // If even, increment the counter
+            }
+        }
+        // Return the total count of numbers with even number of digits
+        return countEvenDigits;
+    }
+}
+
 ----------------------------
 METHORD 1 : NO FUNCTION USED || TAKES 2 MILLI SEC 
 class Solution {
@@ -36,7 +57,7 @@ class Solution {
   }
 }
 -----------------------------
-METHORD 2 : use function  || TKAES 1 MILLISEC TIME
+METHORD 2 : use function  || TAKES 1 MILLISEC TIME
 
 class Solution {
     public int findNumbers(int[] nums) 
