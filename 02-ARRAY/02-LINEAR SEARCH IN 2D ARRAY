@@ -1,8 +1,9 @@
 TIME COMPLEXITY = O(N^2)
 SPACE 0(1)
-------------------------
-EDGE CASES -> IF SIZE OF MATRIX IS 0 OR IF MATRIX FIRST COL LENGTH IS 0)
-------------------------
+------------------------------------
+EDGE CASE 1 -> IF SIZE OF MATRIX IS 0 OR IF MATRIX FIRST COL LENGTH IS 0)
+=====================================
+QUE1 : TO FIND THE TARGET IN 2D ARRAY
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         if(matrix.length == 0 || matrix[0].length == 0)
@@ -21,3 +22,62 @@ class Solution {
         return false;
     }
 }
+======================================
+QUE 2 : FIND MAX VALUE IN 2D AYYAY
+TIME COMPLEXITY = O(N^2)
+SPACE 0(N)
+--------------------------------------
+class Solution {
+    public int searchMatrix(int[][] matrix) {
+        int max_val = INETGER.MIN_VALUE();
+        if(matrix.length == 0 || matrix[0].length == 0)
+        return -1;
+
+        for (int i=0;i<matrix.length; i++)
+        {
+            for(int j=0; j<matrix[i].length; j++)
+            {
+                if (matrix[i][j] > max_val)
+                {
+                    max_val = matrix[i][j] ;
+                }
+            }
+        }
+        return max_val;
+    }
+}
+=========================================
+QUE 3 : FIND MIN IN 2D AYYAY
+TIME COMPLEXITY = O(N^2)
+SPACE 0(N)
+-----------------------------------------
+class Solution {
+    public int searchMatrix(int[][] matrix) {
+        int min_val = INETGER.MAX_VALUE();
+        if(matrix.length == 0 || matrix[0].length == 0)
+        return -1;
+
+        for (int i=0;i<matrix.length; i++)
+        {
+            for(int j=0; j<matrix[i].length; j++)
+            {
+                if (matrix[i][j] < min_val)
+                {
+                    max_val = matrix[i][j] ;
+                }
+            }
+        }
+        return min_val;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
