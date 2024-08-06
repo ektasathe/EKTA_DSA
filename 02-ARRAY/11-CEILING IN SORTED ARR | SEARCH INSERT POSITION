@@ -23,6 +23,14 @@ Input: nums = [1,3,5,6], target = 2 | Output: 1
  e,m,s
 =====================O(log n)============
 
+//////here we are returning the index
+///when we need to return the ceiling no
+--- edge case ---
+if(target > arr[length-1]
+{
+  return -1;
+}
+
 class Solution {
     public int searchInsert(int[] nums, int target) {
         //assumend that sorted array is in asec order
