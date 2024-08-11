@@ -19,13 +19,9 @@ class Solution {
             {
                 end = mid -1 ;
             }
-            else if (target > letters[mid])
+            else if (target >= letters[mid])
             {
                 start = mid + 1;
-            }
-            else if (target == letters[mid])  //IF ELEMTN IS FOUND , THEN RETURN NEXT INDEX ELEMENT
-            {
-                return letters[mid+1];
             }
         }
         return letters[start%letters.length]; //eg3 : at last when while loop will break
