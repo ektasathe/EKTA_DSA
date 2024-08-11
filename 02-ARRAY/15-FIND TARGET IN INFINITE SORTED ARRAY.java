@@ -18,7 +18,7 @@ target = 15
     int start = 0;
     int end = 1;
     // condition for the target to lie in the range
-    while(target<arr[end])
+    while(target > arr[end])
     {
       int newstart = end+1;
       //updated end would be [end+double size of box]
