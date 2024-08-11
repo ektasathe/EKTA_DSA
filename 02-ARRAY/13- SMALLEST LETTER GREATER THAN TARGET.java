@@ -19,7 +19,7 @@ class Solution {
             {
                 end = mid -1 ;
             }
-            else if (target >= letters[mid])
+            else 
             {
                 start = mid + 1;
             }
