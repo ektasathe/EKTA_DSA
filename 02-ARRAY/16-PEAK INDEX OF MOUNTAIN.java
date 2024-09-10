@@ -43,7 +43,7 @@ arr  [1,2,3,5,6,4,3,2]
     }
 }
 ===================================
- KUNAL LOGIC :  below code for if we donot kow that first part is ascending or descending
+ EKTA LOGIC :  below code for if we donot kow that first part is ascending or descending
 class Solution {
     public int peakIndexInMountainArray(int[] arr) {
         //here array is always ascending first and descending later
