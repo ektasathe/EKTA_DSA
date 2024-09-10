@@ -3,10 +3,17 @@ https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
 You are given an integer mountain array arr of length n where the values increase to a peak element and then decrease.
 Return the index of the peak element.
 Your task is to solve it in O(log(n)) time complexity.
-
-  arr [1,2,3,5,6,4,3,2]
   
+Example 1:
 
+Input: nums = [1,2,3,1]  Output: 2
+Explanation: 3 is a peak element and your function should return the index number 2.
+
+Input: nums = [1,2,1,3,5,6,4]  Output: 5
+Explanation: Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.
+
+arr [1,2,3,5,6,4,3,2]
+  
 ##assumed here array is always ascending first and descending later
   class Solution {
     public int peakIndexInMountainArray(int[] arr) {
@@ -32,9 +39,59 @@ Your task is to solve it in O(log(n)) time complexity.
             return end ;
     }
 }
-
 ===================================
-  below code for if we donot kow that first part is ascending or descending
+ KUNAL LOGIC :  below code for if we donot kow that first part is ascending or descending
+class Solution {
+    public int peakIndexInMountainArray(int[] arr) {
+        //here array is always ascending first and descending later
+        int start = 0;
+        int end = arr.length -1 ;
+        if (start < end )
+        {
+        while(start < end)
+        {
+            int mid = start + (end-start)/2;
+            //we are at decreasing part of array . discard right side
+            //there could be possibility that arr[mid] could be largest
+            if(arr[mid] > arr[mid+1]) 
+            {
+                end = mid;
+            }
+            //when we are in asec part of array , discard left side
+            //as of now mid+1 is max element but there could be possibility  to find larger on right side
+            else if(arr[mid] < arr[mid+1])
+            {
+                start = mid + 1;
+            }
+        }
+        //loop break point -> when start and end both will be at same point
+            return end ;
+        }
+        else
+        {
+            while(start > end)
+        {
+            int mid = start + (end-start)/2;
+            //we are at decreasing part of array . discard right side
+            //there could be possibility that arr[mid] could be largest
+            if(arr[mid] > arr[mid+1]) 
+            {
+                end = mid + 1;;
+            }
+            //when we are in asec part of array , discard left side
+            //as of now mid+1 is max element but there could be possibility  to find larger on right side
+            else if(arr[mid] < arr[mid+1])
+            {
+                start = mid;
+            }
+        }
+        //loop break point -> when start and end both will be at same point
+            return end ;
+        }
+    }
+}
+===================================
+ KUNAL LOGIC :  below code for if we donot kow that first part is ascending or descending
 
   package com.kunal;
 
