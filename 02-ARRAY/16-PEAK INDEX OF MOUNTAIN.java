@@ -12,7 +12,10 @@ Explanation: 3 is a peak element and your function should return the index numbe
 Input: nums = [1,2,1,3,5,6,4]  Output: 5
 Explanation: Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.
 
-arr [1,2,3,5,6,4,3,2]
+arr  [1,2,3,5,6,4,3,2]
+                m      => we ae at desc part we want greatest element so right side is not required (end = mid)
+arr  [1,2,3,5,6,4,3,2]
+          m           => we are asec part , we want greatst elemet so left side is not required (start = mid+1)
   
 ##assumed here array is always ascending first and descending later
   class Solution {
