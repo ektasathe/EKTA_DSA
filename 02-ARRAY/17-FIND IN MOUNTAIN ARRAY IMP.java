@@ -37,6 +37,7 @@ class Solution {
                 start = mid +1;
             }
         }
+            //at the end our end and start both would point at pivot iw max element
         peak = srart ;
         if(target < peak)
         {
