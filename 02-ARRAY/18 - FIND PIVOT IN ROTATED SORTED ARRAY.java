@@ -13,11 +13,11 @@ class BinarySearch {
       System.out.println("Not found");
     else
       System.out.println("Element found at index " + result); */
-     System.out.println(findpivot((arr));
+     System.out.println(findpivot(arr));
   }
   
  // int binarySearch(int arr[]) { #if yo write this then you need to create object of the function so use static
-  static findpivot(int arr[]) {
+  static int findpivot(int arr[]) {
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {
