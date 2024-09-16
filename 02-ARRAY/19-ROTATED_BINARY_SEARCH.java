@@ -60,7 +60,7 @@ class Solution {
                return binarySearch(arr, target, 0, arr.length -1) ;
             }
             //CASE 2 : IF PIVOT IS TARGET THEN RETURN PIVOT
-            if(arr[pivot] ==target)
+            if(arr[pivot] == target)
             {
                return pivot;
             }
