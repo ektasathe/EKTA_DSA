@@ -74,3 +74,44 @@ class Solution {
         }
 } 
 
+===============================================
+
+int findpivotinduplicate(int arr[]) 
+{
+  int start =0; int end = arr.length -1 ;
+  while(start <= end)
+    {
+      int mid = start + (end - start) / 2;
+      if( mid < end && arr[mid] > arr[mid+1])
+      {
+        return mid;
+      }
+      else if ( mid < start && arr[mid] < arr[mid-1])
+      {
+        return mid - 1;
+      }
+      //IF ELEMENT AT START MID AND END ARE SAME THEN IGNORE THE START INDEX AND MOVE FRONT SIMILARLY IGNORE THE END INDEX AND MOVE BACK
+      if(arr[start] == arr[mid] && arr[mid] == arr[end])
+      {
+        //ALSO MAKING SURE THAT MID IS NOT PIVOT
+                        // check if start is pivot
+                if (start < end && arr[start] > arr[start + 1]) {
+                    return start;
+                }
+                start++;
+
+                // check whether end is pivot
+                if (end > start && arr[end] < arr[end - 1]) {
+                    return end - 1;
+                }
+                end--;
+      }  
+      else if(arr[start] < arr[mid] || (arr[start] == arr[mid] && arr[mid] > arr[end])) 
+      {
+            start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+    }
+}
+
