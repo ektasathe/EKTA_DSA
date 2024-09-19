@@ -8,7 +8,7 @@ r[[1, 3, 5, 7],
  [23,30,34,60],
  [25,33,38,62]]
 
-
+//return the index of the target
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
        int r =0;
@@ -35,6 +35,7 @@ class Solution {
 
 ===========================================================================================
 
+//returning true if element is found else returning false
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
        int r =0;
