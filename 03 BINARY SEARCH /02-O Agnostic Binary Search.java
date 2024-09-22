@@ -15,10 +15,13 @@ class Solution {
     public int binarysearch(int[] arr, int k) {
         // Code Here
         int start = 0;
-        int end = arr.length -1;
-        
-        boolean isAsec = arr[start] < arr[end]; //if array is in asec orde
-        
+        int end = arr.length -1;  
+        //searching for edge cases when array has ne element
+        if(nums.length == 1 && target == nums[0])
+        {
+            return 0;
+        }
+        boolean isAsec = arr[start] < arr[end]; //if array is in asec order
         while(start <= end)
         {
             int mid = start + (end - start) / 2 ;
@@ -28,7 +31,7 @@ class Solution {
                 return mid;
             }
             
-            else if (isAsec)
+            else if (isAsec) //if arr[start] < arr[end];
             {
                 if(k<arr[mid])
                 {
