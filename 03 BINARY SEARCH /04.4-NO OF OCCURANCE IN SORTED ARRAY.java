@@ -1,19 +1,33 @@
-https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
-Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
-If target is not found in the array, return [-1, -1].
-You must write an algorithm with O(log n) runtime complexity.
---------
-Example :
-Input: nums = [5,7,7,8,8,10], target = 8  | Output: [3,4]
-Input: nums = [5,7,7,8,8,10], target = 6  |  Output: [-1,-1]
--------- (logN) + 0(logN) =  20(logN) = 0(logN) => here constants are ignored
+https://www.geeksforgeeks.org/problems/number-of-occurrence2259/1
+
+Given a sorted array Arr of size N and a number X, you need to find the number of occurrences of X in Arr.
+
+N = 7(size of array) 
+Arr[] = {1, 1, 2, 2, 2, 2, 3} | X = 2 (no to find)
+Output: 4 //2 occours four times in array .
+
+arr={1, 3 ,5, 7, 9, 9} | X=7. //EDGE CASE {3,3}
+OP : 1 //as 7 occours only once in array
+
+arr = {5} | X = 5. //{0,0}
+op:1
 
 class Solution {
-    public int[] searchRange(int[] nums, int target) {
+    int count(int[] nums, int n, int target) {
+        // code here
         int[] ans = {-1,-1};
         ans[0] = result(nums, target, true); //here we are finding first occurance
         ans[1] = result(nums, target, false); //here we are not finding first occourance so false
-        return ans ;
+        if(ans[0] == ans[1] && ans[0] != -1 && ans[1] != -1) //if element occours only once 
+        {
+            return 1; //as element is present only one time
+        }
+        else if(ans[1] - ans[0] == 0){ //when element is not present
+            return 0;
+        }
+        else{
+        return (ans[1] - ans[0] + 1)  ;
+        }
     }
     static int result(int[] nums,int target,boolean isStartIndex)
     {
@@ -39,14 +53,11 @@ class Solution {
             {
                 end = mid -1;
             }
-            else  //(target > nums[mid])
+            else 
             {
                 start = mid+1;
             }
         }
         return ans;
-    } 
-
+    }
 }
-
-
