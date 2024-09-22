@@ -15,7 +15,7 @@ arr  [1,2,3,5,6,4,3,2]
 arr  [1,2,3,5,6,4,3,2]
           m           => we are asec part , we want greatst elemet so left side is not required (start = mid+1)
   
-##assumed here array is always ascending first and descending later
+//assumed here array is always ascending first and descending later
   class Solution {
     public int peakIndexInMountainArray(int[] arr) {
         int start = 0;
