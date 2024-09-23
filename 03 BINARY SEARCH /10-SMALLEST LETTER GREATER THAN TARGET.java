@@ -1,4 +1,5 @@
 ADDITIONALMENTS OF BINARY SEARCH
+//this is like ceil of floor 
 
 eg1:Input: letters = ["c","f","j"], target = "a" | Output: "c"
 eg2:Input: letters = ["c","f","j"], target = "c" | Output: "f" //IF ELEMTN IS FOUND , THEN RETURN NEXT INDEX ELEMENT
