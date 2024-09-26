@@ -21,8 +21,8 @@ https://www.geeksforgeeks.org/problems/who-will-win-1587115621/1
 Given an array arr[] sorted in ascending order of size N and an integer K. Check if K is present in the array or not.
 
 N = 7, target = 6
-arr[] = {-6,-2,1,2,3,4,6}
-Output: 1 => AS 6 IS PRESENT IN ARRAY
+arr[] = {-6,-2,1,2,3,6}
+Output: 5  => AS 6 IS PRESENT IN ARRAY at 5th position
 
 class Solution {
     static int searchInSorted(int arr[], int N, int target) {
