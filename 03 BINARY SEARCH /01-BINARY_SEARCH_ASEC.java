@@ -43,10 +43,10 @@ class Solution {
             }
             else 
             {
-                return 1 ;
+                return 1 ;  //print 1 if element is present
             }
         }
-        return -1 ;
+        return -1 ; //print -1 if element is not present 
     }
 }
 
