@@ -25,7 +25,7 @@ Input: nums = [1,3,5,6], target = 2 | Output: 1
 
 //////here we are returning the index
 ///when we need to return the ceiling no
---- edge case ---
+--- edge case --- arr={1,3,5,6} target = 8  // for 8 there will be no ceiling 
 if(target > arr[length-1]
 {
   return -1;
