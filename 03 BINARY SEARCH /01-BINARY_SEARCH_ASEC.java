@@ -21,7 +21,7 @@ https://www.geeksforgeeks.org/problems/who-will-win-1587115621/1
 Given an array arr[] sorted in ascending order of size N and an integer K. Check if K is present in the array or not.
 
 N = 7, target = 6
-arr[] = {-6,-2,1,2,3,6}
+arr[] = {-6,-2,1,2,5,6,10}
 Output: 5  => AS 6 IS PRESENT IN ARRAY at 5th position
 
 class Solution {
@@ -33,18 +33,19 @@ class Solution {
           // int mid = ( start + end ) / 2     ====> here are chances that mid value can exceed the max integet input digits
         //  max val int cans tore = 10^9 . if start and end values are very high then then mid value can overflow , to avoid it use below
             int mid = start + (end - start)/2 ;   ===> so use this 
+            if(target == arr[mid]
+            {
+                return 1mid;  //print 1 if element is present
+            }
             if( target < arr[mid])
             {
                 end = mid -1 ;
             }
-            else if( target > arr[mid] )
+            else //if( target > arr[mid] )
             {
                 start = mid + 1;
             }
-            else 
-            {
-                return 1 ;  //print 1 if element is present
-            }
+          
         }
         return -1 ; //print -1 if element is not present 
     }
