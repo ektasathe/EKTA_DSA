@@ -1,5 +1,5 @@
 
-INP = [2,5,6,6,6,8,9] ; OP = 2
+INP = [2,5,6,6,6,8,8,9] ; Target = 6 OP = 2 //as first position of 6 is 2 
 
 [2, 5, 6, 6, 6, 8, 9]
  s    m-1 m        e
