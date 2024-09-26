@@ -22,7 +22,7 @@ class Solution {
           // int mid = ( start + end ) / 2     ====> here are chances that mid value can exceed the max integet input digits
         //  max val int cans tore = 10^9 . if start and end values are very high then then mid value can overflow , to avoid it use below
             int mid = start + (end - start)/2 ;   ===> so use this 
-            if 
+            if (target == arr[mid])
             {
                 return mid ;//return index of element if element is found
             }

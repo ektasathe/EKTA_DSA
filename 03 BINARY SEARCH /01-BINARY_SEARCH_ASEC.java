@@ -35,7 +35,7 @@ class Solution {
             int mid = start + (end - start)/2 ;   ===> so use this 
             if(target == arr[mid]
             {
-                return 1mid;  //print 1 if element is present
+                return mid;  //print 1 if element is present
             }
             if( target < arr[mid])
             {
