@@ -62,18 +62,19 @@ class BinarySearch {
         {
           // int mid = ( start + end ) / 2     ====> here are chances that mid value can exceed the max integet input digits
             int mid = start + (end - start)/2 ;   //===> so use this 
+            if(arr[mid]==target)
+            {
+                return mid ; //return index of element if element is found 
+            }
             if( K < arr[mid])
             {
                 end = mid -1 ;
             }
-            else if( K > arr[mid] )
+            else //if( K > arr[mid] )
             {
                 start = mid + 1;
             }
-            else 
-            {
-                return 1 ;
-            }
+            
         }
         return -1 ;
   }
