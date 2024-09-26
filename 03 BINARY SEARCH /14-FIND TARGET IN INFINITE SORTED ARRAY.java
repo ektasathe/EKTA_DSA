@@ -7,6 +7,18 @@ target = 15
 //START WITH BOX/SIZE OF 2
 //DOUBLE THE SIZE OF BOX EACH TIME, ACCORDINGLY UPDATE START AND END INDX
 
+{2, 3, 4, 5, 10, 13, 15, 17, 19, 22, 24, 25, 28, 30, 33, 35, 36 ) //size of box =2
+ S  E
+ M
+
+{2, 3, 4, 5, 10, 13, 15, 17, 19, 22, 24, 25, 28, 30, 33, 35, 36 ) //size of box = 4
+       NS M       E
+       E+1
+
+{2, 3, 4, 5, 10, 13, 15, 17, 19, 22, 24, 25, 28, 30, 33, 35, 36 ) //size of box =8
+                     NS           M               E
+                     E+1
+
   public class InfiniteArray {
     public static void main(String[] args) {
       int arr[] = {2,3,4,5,10,13,15,17,19,22,24,25,28};
@@ -20,10 +32,11 @@ target = 15
     // condition for the target to lie in the range
     while(target > arr[end])
     {
-      int newstart = end+1;
-      //updated end would be [end+double size of box]
-      end = end + (end - start + 1) * 2;
-      start = newstart;     
+      start = end;
+      end = 2*end;
+      //int newstart = end+1;
+      //end = end + (end - start + 1) * 2; //2*SIZE OF OLD ARRAY LENGTH //updated end would be [end+double size of box]
+      //start = newstart;     
     }
     return binsearch(arr, target, start, end);
   }
