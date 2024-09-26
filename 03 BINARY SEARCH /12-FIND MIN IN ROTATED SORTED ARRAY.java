@@ -30,7 +30,8 @@ class Solution {
         {
               int mid = start + (end - start) / 2;
             // 5 cases over here
-          //case 1 : if array is sorted array then start index ould be the smallest element
+          //case 1 : if array is sorted array then start index sould be the smallest element
+          // case 1.1 is covered here as = sign is there
             if((arr[start] <= arr[mid] && arr[mid] <= arr[end]) )
             {
                 return(arr[start]);
