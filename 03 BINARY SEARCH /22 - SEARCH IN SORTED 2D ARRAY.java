@@ -13,7 +13,7 @@ r[[1,  3,  5,  7 ],  [ , - , - , - ]
  IN WORST CASE WE NEED TO TRACVEL LIKE THIS
  [ ,  ,  ,  , | ]
  [ ,  ,  ,  , | ]
- [ ,  ,  ,  , | ]. TIME COMP 0(N*M) , N=ROW, M=COL
+ [ ,  ,  ,  , | ]. TIME COMP 0(N+M) , N=ROW, M=COL
  [-, -, -, -, - ]
 
 //return the index of the target

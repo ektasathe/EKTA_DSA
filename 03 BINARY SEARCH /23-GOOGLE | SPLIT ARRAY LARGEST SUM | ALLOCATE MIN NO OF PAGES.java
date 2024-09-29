@@ -1,4 +1,6 @@
 https://leetcode.com/problems/split-array-largest-sum/
+
+
 EXAMPLE
 Input: nums = [7,2,5,10,8], k = 2  |  Output: 18
 Explanation: There are four ways to split nums into two subarrays.
@@ -17,7 +19,7 @@ end = 32 -> sum of all elements of [7, 2, 5, 10, 8]
   [10,32]
 
 [7, 2, 5], [8, 10]   -----> pieces =2  (pieces<=K) ie (2<=2)  --> end = mid || we need more elements , search at ledt side so
-  14>21     18<21
+  14<21     18<21
 ----------------------------------------------------------------------------------------------------------------
   [start,end]     mid = 15 = 32/2
    [10,21]
