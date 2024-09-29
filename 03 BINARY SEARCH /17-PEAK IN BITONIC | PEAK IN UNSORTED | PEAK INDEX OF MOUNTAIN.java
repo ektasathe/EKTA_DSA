@@ -4,7 +4,7 @@ You are given an integer mountain array arr of length n where the values increas
 Return the index of the peak element.
 Your task is to solve it in O(log(n)) time complexity.
   
-Time complexity: O(logn) : Since we're using binary search, we halve the search space at each step, leading to logarithmic time complexity.
+Time complexity: O(logn) : Since were using binary search, we halve the search space at each step, leading to logarithmic time complexity.
 Space complexity: O(1)  : The algorithm uses a constant amount of extra space.
 -----------------------------------------------------
 Input: nums = [1,2,3,1]  Output: 2

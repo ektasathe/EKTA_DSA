@@ -1,5 +1,6 @@
 https://leetcode.com/problems/find-in-mountain-array/description/
 
+****** BITONIC ARRAY != SORTED ARRAY ******
 
 Example 1:
 Input: array = [1,2,3,4,5,3,1], target = 3
