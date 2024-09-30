@@ -5,7 +5,7 @@ STABLE SORTING ALGO = ORDER SHOULD BE SAME WHEN VALUE IS SAME
 EG :              10,   20,   30,   10,   20.  
                   red.  blue. red. blue.  red
 
-AFTER SORTING.    10,   10,   20,   20,   30.   red 10 comes first and then blue 10
+AFTER SORTING    10,   10,   20,   20,   30.   red 10 comes first and then blue 10
                    red. blue. blue. red. blue
 
 ARRAY = 36, 19, 29, 12 , 5
