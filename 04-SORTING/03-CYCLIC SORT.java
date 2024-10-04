@@ -52,7 +52,7 @@ TOTAL SWAPS AND COMPARISIONS = (N-1)+N = 2N-1 = O(N) //AS WE IGNORE CONSTANTS
   {
     int temp = arr[element];
     arr[element]=arr[correctindex];
-    arr[correctindex] = temp.
+    arr[correctindex] = temp
   }
 }
 
