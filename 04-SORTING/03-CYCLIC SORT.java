@@ -28,35 +28,34 @@ TOTAL SWAPS AND COMPARISIONS = (N-1)+N = 2N-1 = O(N) //AS WE IGNORE CONSTANTS
 
   IF ARRAY IS FROM 1 TO N
 
-  public class CyclicSort{
-  public static void main(String args[])
-  {
-    int arr[] = {5,3,2,1,4};
-    swap(arr);
-    System.out.println(Arrays.toString(arr));
-  }
-  static void cyclicsort(int arr[])
-  {
-    while(i < arr.length)
-    {
-      int correctindex = arr[i] - 1;
-      if(arr[i]  != correctindex)
-      {
-        swap(arr, arr[i], correctindex);}
-      else
-      {
-        i++;}
+  package com.kunal;
+
+import java.util.Arrays;
+
+public class CyclicSort {
+    public static void main(String[] args) {
+        int[] arr = {5, 4, 3, 2, 1};
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
-  }
-  static void swap(int arr[]; int element, int correctindex)
-  {
-    int temp = arr[element];
-    arr[element]=arr[correctindex];
-    arr[correctindex] = temp;
-  }
+
+    static void sort(int[] arr) {
+        int i = 0;
+        while (i < arr.length) {
+            int correct = arr[i] - 1;
+            if (arr[i] != arr[correct]) {
+                swap(arr, i , correct);
+            } else {
+                i++;
+            }
+        }
+    }
+    static void swap(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
+    }
 }
-
-
 
 
 
