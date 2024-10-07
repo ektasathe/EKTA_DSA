@@ -12,9 +12,9 @@ public class Comparison {
         String name1 = new String("Kunal");
         String name2 = new String("Kunal");
 
-        System.out.println(name1 == name2); #false
+        System.out.println(name1 == name2); //op - false
 
-        System.out.println(name1.equals(name2)); #true
-
+        System.out.println(name1.equals(name2)); //op - true
+        System.out.println(name1.charAt(0));   //op - K
     }
 }
