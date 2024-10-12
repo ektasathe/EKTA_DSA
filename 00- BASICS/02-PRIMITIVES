@@ -1,0 +1,45 @@
+PREMITIVE \ PREMITIVE DATA TYPE : a set of basic data types from which all other data types are constructed.
+eg : 
+byte: Stores whole numbers from -128 to 127
+short: Stores whole numbers from -32,768 to 32,767
+int: Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long: Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float: Stores fractional numbers with 6 to 7 decimal digits
+double: Stores fractional numbers with 15 decimal digits
+boolean: Stores true or false values
+char: Stores a single character or ASCII values
+============================================================================================================
+Key differences between Primitive and Non-Primitive Data Types
+
+Size:
+Primitive: Fixed size, predetermined by the programming language (e.g., integer always takes 4 bytes).
+Non-Primitive: Variable size, depending on the complexity of the data they hold.
+
+Memory:
+Primitive: Stored directly in memory, holding the actual value.
+Non-Primitive: Stored as references in memory, containing the address of the actual data location.
+
+Mutability:
+Primitive: Immutable, meaning their values cannot be changed after assignment. Modifying a primitive value creates a new copy.
+Non-Primitive: Mutable, allowing their values to be modified after assignment. Changes affect the original data referenced.
+
+Comparison:
+Primitive: Compared by value — two primitive values are equal only if their actual values are identical.
+Non-Primitive: Compared by reference — two non-primitive values are equal only if they reference the same memory location.
+
+Performance:
+Primitive: Generally faster due to simpler storage and direct manipulation.
+Non-Primitive: May have slower processing due to reference handling and potential memory allocation/deallocation during operations.
+
+When to use which?
+In choosing between primitive and non-primitive data types, 
+consider the complexity of the data and the trade-off between efficiency and functionality.
+Use primitives for fundamental data and simple operations, while non-primitives are better
+suited for complex data structures, object-oriented features, and storing text. 
+
+
+
+
+
+
+
