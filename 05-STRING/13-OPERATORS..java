@@ -8,6 +8,7 @@ public class Operators {
         System.out.println("a" + "b");  // OP - ab
         System.out.println('a' + 3);  //op - 100 (ascii value sum of a+b+c)
         System.out.println((char)('a' + 3));  //op - d
+        System.out.println('"a" + 'b') ; //op - ab | if any one data type is string then it will print string 
         
         System.out.println("a" + 1);  //op - a1
         //when a integer is concanated with string , it is converte to its wrapper class
