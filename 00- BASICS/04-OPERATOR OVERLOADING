@@ -1,0 +1,15 @@
+OPERATOR OVERLOADING:
+WHEN THE OPERATOR GIVES MORE FUNCTIONALITY IT IS CALLED OPERATOR OVERLOADING
+
+eg:
+System.out.println("a"+"b");  //op : ab
+
+we know that + operator is used for adding 2 numers , but here java has given us other fucntionality that we can 
+concinate 2 strings as wellm. this is called as operator overloading.
+
+this exception is only on strings .
+
+in c++ and python operator overloading is highly supported but in java it is not because it results in poor coding .
+
+EXCEPTION:
+IN JAVA + IS THE ONLY OPERATOR THAT IS INTENTIONALLY OVERLOADED TO SUPPORT STRING CONCATINATION
