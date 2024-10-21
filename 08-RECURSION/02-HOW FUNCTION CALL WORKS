@@ -1,0 +1,105 @@
+
+HOW FUNCTION CALL WORKS INTERNALL
+
+HOW FUNCTION VALUES ARE RETURNED
+
+HOW VALUES ARE RETURNED
+
+HOW FUNCTION VALUES ARE RETURNED
+
+HOW STACK MEMORY IS GETTING FILLED
+
+HOW STACK MEMORY GETS CLEARED
+
+================================
+public class Main{
+  public static void main (String args[])
+  {
+    print1(1); //FUNCTION 
+  }
+  static void print1(n)
+  {
+    System.out.println(n);
+    print2(2);
+  }
+  static void print2(n)
+  {
+    System.out.println(n);
+    print3(3);
+  }
+  static void print3(n)
+  {
+    System.out.println(n);
+  }
+}
+OP- 1
+OP- 2
+OP- 3
+===============================
+
+*** 0 *** ALL THE FUNCTION CALL THAT HAPPENS IN PROGRAMMING LANGUAGE GOES TO STACK MEMORY
+*** 1 *** ALL THE PRIMITIVES ALSO STAY IN STACK MEMORY (PRIMITIVES = INT NO)
+*** 2 *** UNLESS A FUNCTION FINISHES IT EXECUITION , IT WILL STAY IN STACK .
+*** 3 *** WHEN A FUNCTION HAS COMPLETED ITS EXECUITION, IT WILL BE REMOVED FROM THE STACK AND THE FLOW OF PROGRAM WILL BE RESTORED TO WHERE THAT FUNCTION WAS CALLED .
+*** 4 *** MAIN FULCTION IS THE ONLY FUNCTION THAT WILL GO INSIDE THE STACK FIRST AND WILL COME OUT OF STACK
+
+|            |
+|            |
+| print3(3)  |
+|------------|
+| print2(2)  |
+|------------|
+| print1(1)  |
+|------------|
+| main       |
+|____________|
+ stack memory
+
+|            |
+|            | //print3(3) WILL COE OUT OF STACK
+|------------|
+| print2(2)  |
+|------------|
+| print1(1)  |
+|------------|
+| main       |
+|____________|
+ stack memory
+
+|            |
+|            | //print3(3) WILL COE OUT OF STACK
+|------------|
+|            | //print2(2) WILL COME OUT OF STACK
+|------------|
+| print1(1)  |
+|------------|
+| main       |
+|____________|
+ stack memory
+
+
+|            |
+|            | //print3(3) WILL COE OUT OF STACK
+|------------|
+|            | //print2(2) WILL COME OUT OF STACK
+|------------|
+|            | //print1(1) WILL COME OUT OF STACK
+|------------|
+| main       |
+|____________|
+ stack memory
+
+|            |
+|            | //print3(3) WILL COE OUT OF STACK
+|------------|
+|            | //print2(2) WILL COME OUT OF STACK
+|------------|
+|            | //print1(1) WILL COME OUT OF STACK
+|------------|
+|            | //MAIN FUNCTION WILL COME OUT OF STACK
+|____________|
+ stack memory
+
+================================
+
+
