@@ -1,0 +1,89 @@
+RECURSION - FUNCTION + MEMORY MANAGEMENT
+RECURSION = CALLING THE FUNCTION AGAIN AND AGAIN 
+
+------ EG 1 --------- the function is called only once that will print the message only once ----------------
+public class Main{
+  public static void main (String args[])
+  {
+    message(); //FUNCTION 
+  }
+  static void message()
+  {
+    System.out.println("Hello World");
+  }
+}
+OP- Hello World
+
+===============================================================================================================
+QUE - PRINT THE "Hello World" 3 TIMES WITHOUT MODIFYING THE FUNCTION OR WITIHOUT CREATING DUPLICATE FUNCTION
+
+BELOW ARE NOT ALLOWED 
+
+public class Main{
+  public static void main (String args[])
+  {
+    message(); //FUNCTION 
+    message(); //FUNCTION 
+    message(); //FUNCTION 
+  }
+  static void message()
+  {
+    System.out.println("Hello World");
+  }
+}
+OP- Hello World
+OP- Hello World
+OP- Hello World
+-------------------------------------------
+
+BELOW ARE NOT ALLOWED 
+
+public class Main{
+  public static void main (String args[])
+  {
+    message(); //FUNCTION 
+  }
+  static void message()
+  {
+    System.out.println("Hello World");
+    System.out.println("Hello World");
+    System.out.println("Hello World");
+  }
+}
+OP- Hello World
+OP- Hello World
+OP- Hello World
+
+==============================================================================================================
+
+public class Main{
+  public static void main (String args[])
+  {
+    message(); //FUNCTION 
+  }
+  static void message()
+  {
+    System.out.println("Hello World");
+    message1();
+  }
+  static void message1()
+  {
+    System.out.println("Hello World");
+    message2();
+  }
+  static void message2()
+  {
+    System.out.println("Hello World");
+  }
+}
+OP- Hello World
+OP- Hello World
+OP- Hello World
+
+
+
+
+
+
+
+
