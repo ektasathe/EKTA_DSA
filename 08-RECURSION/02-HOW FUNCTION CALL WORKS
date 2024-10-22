@@ -17,7 +17,7 @@ public class Main{
   {
     print1(1); //FUNCTION 
   }
-  static void print1(n)
+  static void print1(int n)
   {
     System.out.println(n);
     print2(2);

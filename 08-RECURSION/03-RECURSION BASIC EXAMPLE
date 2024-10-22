@@ -1,1 +1,30 @@
-HI
+RECURSION : CALLING THE ITS OWN FUNCTION AGAIN AND AGAIN ,
+            THE FUNCTION SHOULD HAVE BASE CONDITION THAT WLL HELP TO STOP THE EXECUITION OF FUNCTION AT ONE POINT 
+            IF BASE CONDITION IS NOT GIVEN IN RECURSION THEN THE FUNCTION WILL RUN FOR INFINITE 
+            ** BASE CONDITION SHOULD ALWAYS BE GIVEN BEFORE THE INNER FUNCTION CALL **
+
+
+public class Main{
+  public static void main (String args[])
+  {
+    print(1); //FUNCTION 
+  }
+  static void print(int n)
+  {
+    //base condition
+    if(n==5)
+    {
+        System.out.println(n);
+        return;
+    }
+    System.out.println(n);
+    print(n+1);
+  }
+  
+}
+--OP 
+1
+2
+3
+4
+5
