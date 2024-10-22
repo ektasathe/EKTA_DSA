@@ -1,8 +1,20 @@
-RECURSION : CALLING THE ITS OWN FUNCTION AGAIN AND AGAIN ,
-            THE FUNCTION SHOULD HAVE BASE CONDITION THAT WLL HELP TO STOP THE EXECUITION OF FUNCTION AT ONE POINT 
-            IF BASE CONDITION IS NOT GIVEN IN RECURSION THEN THE FUNCTION WILL RUN FOR INFINITE 
-            ** BASE CONDITION SHOULD ALWAYS BE GIVEN BEFORE THE INNER FUNCTION CALL **
+QUE : WHAT IS ECURSION EXPLAIN : 
+ANS : CALLING THE ITS OWN FUNCTION AGAIN AND AGAIN ,
+      THE FUNCTION SHOULD HAVE BASE CONDITION THAT WLL HELP TO STOP THE EXECUITION OF FUNCTION AT ONE POINT 
+      IF BASE CONDITION IS NOT GIVEN IN RECURSION THEN THE FUNCTION WILL RUN FOR INFINITE 
+      ** BASE CONDITION SHOULD ALWAYS BE GIVEN BEFORE THE INNER FUNCTION CALL **
+      BASE CONDITION = CONDITION WHERE RECURSION WILL STOP MAKING NEW CALLS
 
+QUE : WHAT WILL HAPPEN IF NO BASE CONDITION IS PRESENT
+ANS : THE FUNCTION CALL WILL HAPPEN AGAIN AND AGAIN , EACH FUNCTION CALL WILL TAKE SEPERATE MEMORY IN STACK 
+      AT ONE POINT THE STACK WILL BE COMPLETELY FULL , WHICH WILL LEAD TO STACK OVERFLOW .
+
+QUE : WHY RECORSION IS NEEDED
+AND ; IT HELPS US TO SOLVE BIGGER/COMPLEX PROBLEMS IN SIMPELER WAY
+
+QUE : ADV OF RECURSION
+ANS :  WE AN CONVERTANY RECURSION SOLUTION INTO ITERATION(LOOPS) AN VICE VERSA 
+       SPACE COMPLEXITY I NOT CONSTANT BECAUS OF RECURSIVE CALLS
 
 public class Main{
   public static void main (String args[])
@@ -12,7 +24,7 @@ public class Main{
   static void print(int n)
   {
     //base condition
-    if(n==5)
+    if(n==3)
     {
         System.out.println(n);
         return;
@@ -26,5 +38,63 @@ public class Main{
 1
 2
 3
-4
-5
+
+AS MANY TIMES WE WILL CALL HE FUNCTION , IT WILL TAKE SEPERATE MEMORY
+
+|            |
+|            |
+| print(3)   |
+|------------|
+| print(2)   |
+|------------|
+| print(1)   |
+|------------|
+| main       |
+|____________|
+ stack memory
+
+|            |
+|            | //print3(3) WILL COE OUT OF STACK
+|------------|
+| print(2)   |
+|------------|
+| print(1)   |
+|------------|
+| main       |
+|____________|
+ stack memory
+
+|            |
+|            | //print(3) WILL COE OUT OF STACK
+|------------|
+|            | //print(2) WILL COME OUT OF STACK
+|------------|
+| print(1)   |
+|------------|
+| main       |
+|____________|
+ stack memory
+
+
+|            |
+|            | //print(3) WILL COE OUT OF STACK
+|------------|
+|            | //print(2) WILL COME OUT OF STACK
+|------------|
+|            | //print(1) WILL COME OUT OF STACK
+|------------|
+| main       |
+|____________|
+ stack memory
+
+|            |
+|            | //print(3) WILL COE OUT OF STACK
+|------------|
+|            | //print(2) WILL COME OUT OF STACK
+|------------|
+|            | //print(1) WILL COME OUT OF STACK
+|------------|
+|            | //MAIN FUNCTION WILL COME OUT OF STACK
+|____________|
+ stack memory
+
