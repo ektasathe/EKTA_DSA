@@ -21,6 +21,48 @@ STEP 2 : BASE CONDITION IS ALWAYS REPRESENTED BY ANS WE ALREADY HAVE
                      /  \
                   f(1) + f(0)
 
+
+till left bottom the function will call its corresponding ones
+
+                            /    f(4)
+                           /   /    \
+                          /  /        \
+                         /  f(3)   +    f(2)
+                        /  /      \       / \
+                       / f(2)  +  f(1)  f(1)+f(0)
+                      /  /  \
+                     V  f(1) + f(0)
+
+
+                                3. = fibo(4)
+                              /    \
+                            /        \
+                           2    +      1
+                        /     \      /  \
+                       1   +   1     1 +  0 
+                     /  \
+                    1 +  0
+
+------POINT 3 : STACH DIAGRAM ----------
+
+
+|            |
+|------------|
+| FIBO(0)    |
+|------------|
+| FIBO(1)    |
+|------------|
+| FIBO(2)    |
+|------------|
+| FIBO(3)    |
+|------------|
+| FIBO(4)    |
+|------------|
+| main       | //INTERNALLY
+|____________|
+ stack memory
+
+
 ======================================
 https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
 
