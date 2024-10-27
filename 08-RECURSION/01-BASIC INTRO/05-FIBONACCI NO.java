@@ -10,6 +10,7 @@ STEP 2 : BASE CONDITION IS ALWAYS REPRESENTED BY ANS WE ALREADY HAVE
 ----------------------------------
 | fibo(n) = fibo(n-1) + fibo(n-2) | -> this is called recursion relation
 ----------------------------------
+***** LINEAR RECURRANCE RELATIO  *****
 
 ---POINT 2 : RECURSIVE TREE -----
                                 f(4)
