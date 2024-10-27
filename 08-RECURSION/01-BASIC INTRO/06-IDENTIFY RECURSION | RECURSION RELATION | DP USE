@@ -1,4 +1,4 @@
-QUE : HOW TO IDENTIFY THE TPE OF RECURSION
+QUE : HOW TO IDENTIFY THE TPE OF RECURSION ?
 
 STEP 1 : IDENTIFY IF YOU CAN BREAK THE PROBLEM INTO SMALLER PARTS
 STEP 2 : WRITE THE RECURSION RELATION
@@ -13,7 +13,8 @@ STEP 5 : SEE HOW THE VALUED AND WHAT TYPE OF VALUES(INT, STRING) ARE RETURNED AT
 
 =============================================================================================================
 
-QUE : WHAT ARE TYPES OF RECURSION RELATION
+QUE : WHAT ARE TYPES OF RECURSION RELATION ?
+
 ANS 1 : LINEAR RECURSION (EG ; FIBONACCI)
 ----------------------------------
 | fibo(n) = fibo(n-1) + fibo(n-2) | -> this is called recursion relation
@@ -23,3 +24,21 @@ ANS 2 : DIVIDE AND CONQUER RECURSION (EG : BINARY SEARCH )
  -------------------------------------------------------------------
 | F(N) = O(1) + F(N/2)  = CONSTANT TIME + DIVIDE THE ARR INTO HALF) |
  -------------------------------------------------------------------
+
+===============================================================================================================
+QUE : WHICH RECURSION RELATION IS EFFICIENT ?
+ANS : DIVIDE AND CONQUER IS MUCH MORE EFFICIENT BECAUSE , THE SPACE IS REDUCED INTO HALF
+      WHERE AS IN LINEAR RECURSION THE THE SPACE IS GETTING REDUCED VERY SLOWELY
+      DIVIDE AND CONQUER RECURSION --> EFFICIENT
+      LINEAR RECURSION --> NON EFFICIENT , EG IN FIBO RECURSION , WE CAN SEE THAT THE FUNCTION CALL FOR F(2) IS
+                           REPEATED TWICE , THAT IS OF NO USE BUT CONSUMING OUR MORE TIME .
+                           IT HAS REPEATED FUNCTION CALLS  .
+                           FOR GREATER NO THERE WILL BE SO MANY FUNCTION CALLS .
+
+===============================================================================================================
+QUE :  HOW TO SOLVE PROBLEM OF REPEATED FUNCTION CALLS IN LINEAR RECURSON 
+ANS :  USE DYNAMIC PROGRAMMING (DP)
+       DP - IF 2 OR MORE RECURSION CALLS ARE DOING THE SAME WORK THEN DON'T COMPUTE IT AGAIN AND AGAIN 
+
+
+
