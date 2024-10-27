@@ -1,3 +1,14 @@
+HOW TO USE BELOW  
+
+*** ARGUEMENTS : 
+WHATEVER WE PUT IN ARGUEMENTS, IT WILL GO IN NEXT FUNCTION CALL . IT WOULD BE SPECIFIC TO THAT FUNCTION CALL .
+
+*** RETURN TYPE : 
+IF WE ARE USING STATIC INT IN FUNCTION THEN THERE SHOULD HAVE RETURN STATEMENT IN BODY
+
+*** BODY OF FUNCTION : 
+THE VARIABLES THAT WE DONOT NEED IN FUTURE FUNCTION CALLS, PUT IT IN THE BODY 
+========================================================================================================
 RECURSION IN BINARY SEARCH
 
  -------------------------------------------------------------------
