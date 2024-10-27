@@ -11,7 +11,9 @@ STEP 4 : ABOUT THE TREE :
 STEP 5 : SEE HOW THE VALUED AND WHAT TYPE OF VALUES(INT, STRING) ARE RETURNED AT EACH STEP .
          SEE WHERE THE FUNCTION CALL WILL COME OUT AT THE END , AT END YOU WILL COME OUT OF MAIN FUNCTION .
 
-QUE : WHAT ARE TYPES OF RECURSION 
+=============================================================================================================
+
+QUE : WHAT ARE TYPES OF RECURSION RELATION
 ANS 1 : LINEAR RECURSION (EG ; FIBONACCI)
 ----------------------------------
 | fibo(n) = fibo(n-1) + fibo(n-2) | -> this is called recursion relation
