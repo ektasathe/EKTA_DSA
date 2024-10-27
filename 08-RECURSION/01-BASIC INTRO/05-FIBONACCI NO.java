@@ -20,8 +20,18 @@ STEP 2 : BASE CONDITION IS ALWAYS REPRESENTED BY ANS WE ALREADY HAVE
                       f(2)  +  f(1)  f(1)+f(0)
                      /  \
                   f(1) + f(0)
-
-
+--------------------------------------------------------------------
+         0th function call = main function
+                         "1ST" f(4)
+                              /    \
+                            /        \
+                   "2nd" f(3)   +    f(2)  "7th"
+                        /      \       / \
+                "3rd" f(2)  +  f(1)  f(1) + f(0)
+                     /  \      "6th"  "8th"  "9th"
+                  f(1) + f(0)
+              "4th"      "5th"  
+         
 till left bottom the function will call its corresponding ones
 
                             /    f(4)
