@@ -12,8 +12,12 @@ STEP 5 : SEE HOW THE VALUED AND WHAT TYPE OF VALUES(INT, STRING) ARE RETURNED AT
          SEE WHERE THE FUNCTION CALL WILL COME OUT AT THE END , AT END YOU WILL COME OUT OF MAIN FUNCTION .
 
 QUE : WHAT ARE TYPES OF RECURSION 
-1 : LINEAR RECURSION (EG ; FIBONACCI)
-2 : DIVIDE AND CONQUER RECURSION (EG : BINARY SEARCH )
+ANS 1 : LINEAR RECURSION (EG ; FIBONACCI)
+----------------------------------
+| fibo(n) = fibo(n-1) + fibo(n-2) | -> this is called recursion relation
+----------------------------------
+
+ANS 2 : DIVIDE AND CONQUER RECURSION (EG : BINARY SEARCH )
  -------------------------------------------------------------------
 | F(N) = O(1) + F(N/2)  = CONSTANT TIME + DIVIDE THE ARR INTO HALF) |
  -------------------------------------------------------------------
