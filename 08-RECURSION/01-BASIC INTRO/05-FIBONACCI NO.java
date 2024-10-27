@@ -73,8 +73,9 @@ class Solution {
         {
             return n;
         }
-        return nthFibonacci(n-1) + nthFibonacci(n-2);
-        
+        //THIS FUNCTION DOESNOT HAVE ANY TAIL RECURSION
+        //AS THERE IS RETURN IN FRONT OF THOSE
+        return nthFibonacci(n-1) + nthFibonacci(n-2);  
     }
 }
 =================================
