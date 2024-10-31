@@ -22,7 +22,7 @@ TIME TAKEN OR BOTH THE MACHINES ARE IFFERENT BUT
 THE RELATION FOR SIZE AND TIME TAKEN FOR BOTH HTE MACHINES ARE SAME : IE LINEAR
 JUST THE ANGLE θ IS SMALL FOR NEW MACHINE AND BIG FOR OLD MACHINE
 
-OLD MACHINE  : Y = K * X --> MATHEMATICAL FORMULAE
+OLD MACHINE  : Y = K * X  : Y = 2 * X --> MATHEMATICAL FORMULAE
 -------------
 TIME 
      ^
@@ -36,7 +36,8 @@ TIME
       ----.----.----.----.------>
         10K   20K  30K  40K     SIZE 
 
-NEW MACHINE : Y = K * X --> MATHEMATICAL FORMULAE
+NEW MACHINE : Y = K` * X :  Y = 8 * X  -> MATHEMATICAL FORMULAE
+OR Y=3X + 5- -> THIS WILL ALSO GIVE LINEAR TIME COMPLEXITY
 -----------
 TIME 
      ^
@@ -47,6 +48,52 @@ TIME
 5S   |       /
      |    /
 1S   | /  θ``
+      ----.----.----.----.------>
+        10K   20K  30K  40K     SIZE 
+
+==========================================================================================
+
+QUE : WHAT TO CONSIDER WHILE THINKING ABOUT COMPLEXITY ?
+
+ANS : 1.1 : ALWAYS CONSIDER THE WORST TIME COMPLEXITY 
+      1.2 : ALWAYS LOOK AT COMPLEXITY FOR LARGE INFINITE DATA
+      1.3 : DON'T CARE ABOUT THE ACTUAL TIME TAKEN , CARE ABOUT THE RELATION OF TIME AND SIZE (HOW TIME VARIES AS THE SIZE GROWS).
+
+--------------------------------------------------------------------------------------------
+
+QUE : WHT NOT TO CONSIDER ABOUT THE SMALL SIZE WHILE CONSIDERING THE TIME COMPLEXITY ?
+      FOR SMALL SIZE , O(N) NIGHT TAKE LESS TIME THAN O(LOG N) BUT ANY WAYS THE SIZE IS SMALL IT WON'T EFFECT MUCH ALL THE COMPLEXITY GRAPH WOULD BE NEAR TO EACH OTHER FOR SMALLER SIZE
+
+--------------------------------------------------------------------------------------------
+
+QUE : WHY DO WE IGNORE CONSTANTS IN TIME TIME COMPLEXITY ?
+      IN BOTH THE EQUTION  Y = 2X AND  Y=2X + 3 
+      THE GRAPH IS LINEAR , SO IGNORE CONSTANTS 
+      Y=2X + 3 -> IN EQUATION THIS EVEN IF WE REMOVE THE CONSTANT , WE WILL GET THE LINEAR GRAPH ONLY .
+
+Y = 2X ---> ALSO A LINEAR GRAPH
+TIME                                          
+     ^
+15S  |                   /
+     |                /
+10S  |             / 
+     |          /
+5S   |       /
+     |    /
+1S   | /  θ``
+      ----.----.----.----.---->
+        10K   20K  30K  40K   SIZE 
+
+ Y=2X + 3 ---> ALSO A LINEAR GRAPH
+TIME 
+     ^
+15S  |     /
+     |    /
+10S  |   / 
+     |  /
+5S   | /
+     |
+1S   | 
       ----.----.----.----.------>
         10K   20K  30K  40K     SIZE 
 
