@@ -1,0 +1,53 @@
+WHAT IS TIME COMPLEXITY :
+IT IS THE FUNCTION THAT GIVES US RELATIONSHIP ABOUT HOW THE TIME GROWS AS THE SIZE OF INUT GROWS
+WE REPRESENTS IT IN BIG O NOTATION
+
+----------------------------------------------------------------------------------------
+10 YR OLD MACHINE                     |       LATEST MAC BOOK
+-----------------------------------------------------------------------------------------             
+                                      |
+2000 ELEMENTS IN ARRAY                |       2000 ELEMENTS IN ARRAY
+TIME TAKEN TO LINEAR SEARCH AN        |       TIME TAKEN TO LINEAR SEARCH AN 
+ELEMENT THAT DOESNOT EXISTS ?         |       ELEMENT THAT DOESNOT EXISTS ?
+                                      |
+TIME TAKEN TO RUN PRGM  = 20 SEC      |      TIME TAKEN  TO RUN PRGM = 5 SEC
+
+ANS. : FOR LINEAR SEARCH ALGO BOTH THE MACHINES WILL TAKE SAME TIME COMPLEXITY .
+
+CONCLUSION : || *** TIME COMPLEXITY != TIME TAKEN *** || 
+
+==========================================================================================
+IF WE PLOT THE GRAPH OF TIME TAKEN BY BOTH THE MACHINES 
+TIME TAKEN OR BOTH THE MACHINES ARE IFFERENT BUT 
+THE RELATION FOR SIZE AND TIME TAKEN FOR BOTH HTE MACHINES ARE SAME : IE LINEAR
+JUST THE ANGLE θ IS SMALL FOR NEW MACHINE AND BIG FOR OLD MACHINE
+
+OLD MACHINE  : Y = K * X --> MATHEMATICAL FORMULAE
+-------------
+TIME 
+     ^
+39S  |             /
+     |           /
+20S  |         / 
+     |       /
+10S  |     /
+     |   /
+5S   | / θ`
+      ----.----.----.----.------>
+        10K   20K  30K  40K     SIZE 
+
+NEW MACHINE : Y = K * X --> MATHEMATICAL FORMULAE
+-----------
+TIME 
+     ^
+15S  |                   /
+     |                /
+10S  |             / 
+     |          /
+5S   |       /
+     |    /
+1S   | /  θ^
+      ----.----.----.----.------>
+        10K   20K  30K  40K     SIZE 
+
+
