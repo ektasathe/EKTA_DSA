@@ -1,0 +1,20 @@
+BIG O NOTATION | UPPER BOUND
+
+TIME COMP = O(N^3)
+MEANS MAX ITS TIME COMP CAN BE THIS AND CAAN BE LOWER THAB THIS AS WELL BUT IT CAN NEVER EXCEED O(N^3)
+
+==========================================================================================================
+
+OMEGA Ω NOTATION | LOWER BOUND
+
+TIME COMP = Ω(N^3)
+MEANS THIME COMPLEXITY CAN BEMINIMUM N^3 AND CAN BE MORE THAN THIS, BUT IT CANNOT BE LESS THAN N^3
+
+==========================================================================================================
+
+THETA Θ NOTATION | MID BOUND 
+
+TIME COMP = Θ(N^3)
+IT MEANS THAT LOWER AND UPPER BOUND BOTH ARE Θ(N^3)
+
+==========================================================================================================
