@@ -1,1 +1,17 @@
 IN RECURSION AS THE FUNCTIONS GO IN THE STACKA ND COME OUT OF STACK SO THEY  DONOT HAVE CONSTANT SPACE COMPLEXITY
+
+         0th function call = main function
+                         "1ST" f(4)                  -------> level 1
+                              /    \
+                            /        \
+                   "2nd" f(3)   +    f(2)  "7th"     -------> level 2
+                        /      \       / \
+                "3rd" f(2)  +  f(1)  f(1) + f(0)     -------> level 3
+                     /  \      "6th"  "8th"  "9th"
+                  f(1) + f(0)                        -------> level 4
+              "4th"      "5th"  
+
+ALL THE FUNCTIONS OF LEVEL 3 CANNOT BE IN STACH AT SAME TIME 
+FUNCTION 9 WILL NOT EVEN EXECUTE UNTIL FUN 3 IS COMPLETED AND FUN 6 AND 8 AS WELL ARE COMPLETED .
+AS OUR RECURSION PRGM FUNCTIONS GOES STARTS FROM THE LEFTMOST BRANCH AND GOES TILL BOTTOM LEFTMOST END .
+SO MAX THE STACK FILL BE FILLED TILL ALL THE FUNCTIONS ARE INSERTED IN STACK IE O(N) WHERE N IS NO OF INPUT.
