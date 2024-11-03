@@ -1,0 +1,23 @@
+TYPE 1 : LINEAR RECURSION . EG -FIBONACCI
+TYPE 2 : DIVIDE AND CONQUER . EG - BINARY SEARCH
+
+    TYPE 1 : LINEAR              |      TYPE 2 : DIVIDE AND CONQUER
+--------------------------------------------------------------------------------------------------------------------------
+F(N) = F(N-1) + F(N-2)           |   F(N) = F(N/2) + O(1)
+                                 |   SEARCH IN ARRAY OF SIZE N = SEARCH IN ARRAY OF SZE(N/2) + CONSTANT TIME COMPLEXITY 
+--------------------------------------------------------------------------------------------------------------------------
+
+HOW TO GET THE FORMULATE FOR TIME COMPLEXITY ? USE BELOW
+
+TYPE 2 :  DIVIDE AND CONQUER METHORD
+
+T(x) = a1 T(b1 * x + e1(x)) + a2 T(b2 * x + e2(x)) + _ _ _ + g(x)
+for x >= xo where xo is some constant .
+
+HERE : F(N) = F(N/2) + O(1)
+T(x) = 
+
+
+===========================================================================================================
+
+
