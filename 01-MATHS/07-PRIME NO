@@ -20,3 +20,14 @@ class Solution
         return 1;
     }
 }
+
+//here we are comparing " i<=Math.sqrt(N) " because see below eg 
+1 × 36 --
+2 × 18  |
+3 × 12  | all t=of these nos are repeated below so after this parir the y will repeat so ignore it
+4 × 9   |
+6 × 6  __
+9 × 4
+12 × 3
+18 × 2
+36 × 1
