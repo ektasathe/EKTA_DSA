@@ -19,17 +19,17 @@ public class Main{
   }
   static void print1(int n)
   {
-    System.out.println(n);
+    System.out.println(1);
     print2(2);
   }
   static void print2(n)
   {
-    System.out.println(n);
+    System.out.println(2);
     print3(3);
   }
   static void print3(n)
   {
-    System.out.println(n);
+    System.out.println(3);
   }
 }
 OP- 1
