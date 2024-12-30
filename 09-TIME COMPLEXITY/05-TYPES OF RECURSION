@@ -15,7 +15,18 @@ T(x) = a1 T(b1 * x + e1(x)) + a2 T(b2 * x + e2(x)) + _ _ _ + g(x)
 for x >= xo where xo is some constant .
 
 HERE : F(N) = F(N/2) + O(1)
-T(x) = 
+a1 = 1 ; b1 = 1/2 ; e1 = 0
+T(x) =  1 * T(1/2 + 0)
+
+EG 1 : 9 T(N/3) + 4/3 T(5N/6) + 4N^3
+       |    |      |     |        |
+       a1   b1    a2     b2      constant
+
+EG 2 :  2 T (N/2) + (N-1)
+        |     |       |
+        a1    b1     constant
+      |___________|  |____________|
+   when u get ans  + what u have to with ans
 
 
 ===========================================================================================================
