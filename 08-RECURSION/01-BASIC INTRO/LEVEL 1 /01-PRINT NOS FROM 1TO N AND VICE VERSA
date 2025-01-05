@@ -76,7 +76,7 @@ class Main {
         funrev(5);
         funboth(5);
     }
-    static void fun(int n)
+    static void fun(int n) //op : 1 2 3 4 5 
     {
         if(n==0)
         {
@@ -84,19 +84,17 @@ class Main {
         }
         System.out.print(n+" ");
         fun(n-1);
-        System.out.print(n+" ");
     }
-    static void funrev(int n)
+    static void funrev(int n)  //op : 5 4 3 2 1 
     {
         if(n==0)
         {
             return ;
         }
-        System.out.print(n+" ");
         funrev(n-1);
         System.out.print(n+" ");
     }
-    static void funboth(int n)
+    static void funboth(int n). //op : 5 4 3 2 1 1 2 3 4 5 
     {
         if(n==0)
         {
@@ -108,5 +106,3 @@ class Main {
     }
 }
 
-op : 
-5 4 3 2 1 1 2 3 4 5 5 4 3 2 1 1 2 3 4 5 5 4 3 2 1 1 2 3 4 5 
