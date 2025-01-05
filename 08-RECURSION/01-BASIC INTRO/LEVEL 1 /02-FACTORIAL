@@ -1,4 +1,5 @@
 https://www.geeksforgeeks.org/problems/factorial5739/1
+FACTORIAL OF A NO : the product of that number with every whole number less than or equal to 'n' till 1.
 
 EXPLAINATION 
 5! = 5 * 4 * 3 * 2 * 1
@@ -10,9 +11,9 @@ EXPLAINATION
 
 5! = 5 * 4!
          4! = 4 * 3!
-                3! = 3 * 2!
-                        2! = 2 * 1!
-                                 1! = 1
+                  3! = 3 * 2!
+                           2! = 2 * 1!
+                                    1! = 1
 =================CODE FUNCTION =====================
 class Solution {
     static int fact(int n) {
