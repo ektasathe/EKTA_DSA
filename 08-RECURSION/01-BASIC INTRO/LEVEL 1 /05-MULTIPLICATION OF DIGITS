@@ -2,13 +2,13 @@ https://www.geeksforgeeks.org/problems/sum-of-digits1742/1
 
 TIME COMPLEXITY = O(log n)
 
-Input: n = 235
+Input: n = 232
 Output 10
-Explanation: Sum of 235's digits: 2 + 3 + 5 = 10
+Explanation: Mul of 235's digits: 2 * 3 * 2 = 10
 
-235 = fun(23) + 5.    //fun(23) will search for fun(2) + 3
-    = fun(2) + 3 + 5 //fun(2) will search for fun(2) + fun(0)
-    = 2 + 3 + 5.     //fun(0) would return 0
+232 = fun(23) * 2.    //fun(23) will search for fun(2) * 3
+    = fun(2) * 3 * 2 //fun(2) will search for fun(2) * fun(0)
+    = 2 * 3 * 2.     //fun(0) would return 1
 
 n = n % 10  -> will give last digit
 n = n/10 -> will give the starting digits 
@@ -18,47 +18,33 @@ class Solution {
         // BASE CONDITION
         if (n==0)
         {
-            return 0;
+            return 1;
         }
-        return ( sumOfDig(n/10) + n%10 );
+        return ( sumOfDig(n/10) * n%10 );
     }
 }
 
 ===============================================================
-| sumOfDig(0)     | ==> will return 0
+| MulOfDig(0)     | ==> will return 1
 |-----------------|
-| sumOfDig(3)     | 
+| MulOfDig(3)     | 
 |-----------------|
-| sumOfDig(23)    |
+| MulOfDig(23)    |
 |-----------------|
-| sumOfDig(235)   |
-|-----------------|
-| main            | 
-|_________________|
- stack memory
-
-
-|                 | 
-|-----------------|
-| sumOfDig(3)     | 0 + 3 = 3 would be returned
-|-----------------|
-| sumOfDig(23)    |
-|-----------------|
-| sumOfDig(235)   |
+| MulOfDig(232)   |
 |-----------------|
 | main            | 
 |_________________|
  stack memory
 
 
-
 |                 | 
 |-----------------|
-|                 | 
+| MulOfDig(3)     | 1 * 3 = 3 would be returned
 |-----------------|
-| sumOfDig(23)    | 2 + 3 = 5 would be returned
+| MulOfDig(23)    |
 |-----------------|
-| sumOfDig(235)   |
+| MulOfDig(232)   |
 |-----------------|
 | main            | 
 |_________________|
@@ -70,9 +56,23 @@ class Solution {
 |-----------------|
 |                 | 
 |-----------------|
+| MulOfDig(23)    | 2 * 3 = 6 would be returned
+|-----------------|
+| MulOfDig(232)   |
+|-----------------|
+| main            | 
+|_________________|
+ stack memory
+
+
+
 |                 | 
 |-----------------|
-| sumOfDig(235)   | 5 + 5 = 10 would be returned to main function 
+|                 | 
+|-----------------|
+|                 | 
+|-----------------|
+| MulOfDig(232)   | 6 * 2 = 12 would be returned to main function 
 |-----------------|
 | main            | 
 |_________________|
@@ -86,13 +86,13 @@ public class Fact {
         System.out.println(ans);
     }
 
-static int sumOfDig(int n) {
+static int MulOfDig(int n) {
         // BASE CONDITION
         if (n==0)
         {
-            return 0;
+            return 1;
         }
-        return ( sumOfDig(n/10) + n%10 );
+        return ( MulOfDig(n/10) * n%10 );
     }
 }
 ===============================================
