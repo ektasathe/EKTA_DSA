@@ -5,6 +5,12 @@ inp : 5 | op : 15. and inp : 3 | op : 6
 5 = 5 + 4 + 3 + 2 + 1 = 15
 3 = 3 + 2 + 1 = 6
 
+5 = 5 + sum(4)
+         4 = 4 + sum(3)
+                  3 = 3 +sum(2)
+                            2 = 2 + sum(1)
+                                     sum(1) = 1
+
 FORMULAE => n = n + sum(n-1)
 =================CODE FUNCTION =====================
 class Solution {

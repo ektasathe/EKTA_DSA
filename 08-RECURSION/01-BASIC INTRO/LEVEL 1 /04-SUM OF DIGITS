@@ -1,0 +1,79 @@
+https://www.geeksforgeeks.org/problems/sum-of-digits1742/1
+
+Input: n = 235
+Output 10
+Explanation: Sum of 235's digits: 2 + 3 + 5 = 10
+
+235 = fun(23) + 5
+    = fun(2) + 3 + 5
+    = 2 + 3 + 5
+
+n = n % 10  -> will give last digit
+n = n/10 -> will give the starting digits 
+===================== CODE SNIPPET ==========================
+class Solution {
+    static int sumOfDig(int n) {
+        // BASE CONDITION
+        if (n==0)
+        {
+            return n;
+        }
+        return ( sumOfDig(n/10) + n%10 );
+    }
+}
+
+===============================================================
+| sumOfDig(0)     | ==> will return 0
+|-----------------|
+| sumOfDig(3)     | 
+|-----------------|
+| sumOfDig(23)    |
+|-----------------|
+| sumOfDig(235)   |
+|-----------------|
+| main            | 
+|_________________|
+ stack memory
+
+
+|                 | 
+|-----------------|
+| sumOfDig(3)     | 0 + 3 = 3 would be returned
+|-----------------|
+| sumOfDig(23)    |
+|-----------------|
+| sumOfDig(235)   |
+|-----------------|
+| main            | 
+|_________________|
+ stack memory
+
+
+
+|                 | 
+|-----------------|
+|                 | 
+|-----------------|
+| sumOfDig(23)    | 2 + 3 = 5 would be returned
+|-----------------|
+| sumOfDig(235)   |
+|-----------------|
+| main            | 
+|_________________|
+ stack memory
+
+
+
+|                 | 
+|-----------------|
+|                 | 
+|-----------------|
+|                 | 
+|-----------------|
+| sumOfDig(235)   | 5 + 5 = 10 would be returned to main function 
+|-----------------|
+| main            | 
+|_________________|
+ stack memory
+
+
