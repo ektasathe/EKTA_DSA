@@ -1,5 +1,7 @@
 https://www.geeksforgeeks.org/problems/sum-of-digits1742/1
 
+TIME COMPLEXITY = O(log n)
+
 Input: n = 235
 Output 10
 Explanation: Sum of 235's digits: 2 + 3 + 5 = 10
