@@ -1,0 +1,42 @@
+concept(n--) --> THIS WILL RETURN THE N AND DO N-1
+concept(--n) --> THIS WILL DO N-1 THEN RETURN THE VALUE OF N
+
+-- QUE 1 : GUESS WHAT WOULD BE THE OUTPUT 
+public class Nto1 {
+    public static void main(String[] args) {
+        funBoth(5);
+    }
+    // concept
+    static void concept(int n) {
+        if (n == 0) {
+            return;
+        }
+        System.out.print(n + " ");
+        concept(n--);
+//        concept(--n);
+//        n-- vs --n
+    }
+}
+ -----OP-----
+ INFINITE LOOP
+
+=======================================================================
+
+ -- QUE 2 : GUESS WHAT WOULD BE THE OUTPUT 
+public class Nto1 {
+    public static void main(String[] args) {
+        funBoth(5);
+    }
+    // concept
+    static void concept(int n) {
+        if (n == 0) {
+            return;
+        }
+        System.out.print(n + " ");
+//       concept(n--);
+        concept(--n);
+//        n-- vs --n
+    }
+}
+-----OP-----
+5 4 3 2 1
