@@ -81,6 +81,6 @@ class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(rev2(1234));
+        System.out.println(rev2(183));
     }
 }

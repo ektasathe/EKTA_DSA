@@ -1,0 +1,38 @@
+PALINDROME = REV OF NO
+
+IF NO == REV NO -> THEN RETURN TRUE ELSE FALSE
+
+SO COPY THE SAAME PREVIOUS CODE AND JUST CHECK THE CONDITION (NO == REV NO)
+
+
+=================== USING HELPER FUNCTION WITH RECURSION ======================
+class Main {
+
+ static int rev2(int n) {
+        // sometimes you might need some additional variables in the argument
+        // in that case, make another function
+        int digits = (int)(Math.log10(n)) + 1;
+        return helper(n, digits);
+    }
+
+    private static int helper(int n, int digits) { //this is private function
+        //condition when no is single digit return the no itself
+        if (n%10 == n) {
+            return n;
+        }
+        int rem = n % 10;     //so inside rivate helper function , we have created int rem , so rem variable would only be accessed in this helper function and not outside this
+
+        //here we are using "digits" variabe that si declared in rev2 function
+        return rem * (int)(Math.pow(10, digits-1)) + helper(n/10, digits-1);
+    }
+    static boolean palin(int n)
+    {
+        return(n == rev(n));  //this will return true or false
+    }
+
+    public static void main(String[] args) {
+        System.out.println(rev2(313));
+    }
+}
+
+
