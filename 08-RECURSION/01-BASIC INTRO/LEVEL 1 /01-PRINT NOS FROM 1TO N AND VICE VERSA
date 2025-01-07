@@ -1,34 +1,12 @@
 TIIME COMP = O(N) => CAUSE IT WILL ITERATE TO EACH STACK
 SPACE COMP = O(N) => CAUSE N NO OF SPACES IN STACK
 
-print nos from 5 4 3 2 1 || return type would be void
-*** filling in stacks ***
-class Main {
-    public static void main(String[] args) {
-        fun(5);
-    }
-    static void fun(int n)
-    {
-        if(n==0)
-        {
-            return;
-        }
-         System.out.print(n+" ");
-        fun(n-1);
-    }
-}
-
-op :
-5 4 3 2 1
-
-====================================================
-
-print nos : 1 2 3 4 5  || return type would be void
+print nos : 1 2 3  || return type would be void
 *** removing from stacks ***
 
 class Main {
     public static void main(String[] args) {
-        fun(5);
+        fun(3);
     }
     static void fun(int n)
     {
@@ -36,15 +14,100 @@ class Main {
         {
             return ;
         }
-        
         fun(n-1);
         System.out.print(n+" ");
     }
 }
 
-op : 1 2 3 4 5 
+op : 1 2 3 
+
+
+|            | 
+|------------|
+|            | 
+|------------|
+| fun(3)     |
+|------------|
+| main       | 
+|____________|
+ stack memory
+
+
+|            | 
+|------------|
+| fun(2)     | 
+|------------|
+| fun(3)     |
+|------------|
+| main       | 
+|____________|
+ stack memory
+
+
+|            |   -> print 1
+|------------|
+|            |  -> print 2
+|------------|
+|            |. -> print 3 
+|------------|
+| main       | 
+|____________|
+ stack memory
 
 ====================================================
+
+print nos from 3 2 1 || return type would be void
+*** filling in stacks ***
+class Main {
+    public static void main(String[] args) {
+        fun(3);
+    }
+    static void fun(int n)
+    {
+        if(n==0)
+        {
+            return;
+        }
+        System.out.print(n+" ");
+        fun(n-1);
+    }
+}
+
+op :
+3 2 1
+
+| fun(1)     | 
+|------------|
+| fun(2)     | 
+|------------|
+| fun(3)     |
+|------------|
+| main       | 
+|____________|
+ stack memory
+
+|            | 
+|------------|
+| fun(2)     | 
+|------------|
+| fun(3)     |
+|------------|
+| main       | 
+|____________|
+ stack memory
+
+|            | 
+|------------|
+|            | 
+|------------|
+| fun(3)     |
+|------------|
+| main       | 
+|____________|
+ stack memory
+
+====================================================
+
 print nos : 5 4 3 2 1 1 2 3 4 5 || return type would be void
 
 class Main {
@@ -64,6 +127,9 @@ class Main {
 }
 
 op : 5 4 3 2 1 1 2 3 4 5 
+
+
+
 
 
 

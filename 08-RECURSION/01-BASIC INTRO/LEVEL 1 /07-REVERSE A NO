@@ -1,0 +1,43 @@
+https://www.geeksforgeeks.org/problems/reverse-digit0316/1
+
+INP = 183
+OP = 381
+
+=================WITHOUT RECURSION ======================
+
+class Solution {
+    public int reverseDigits(int n) {
+        int ans = 0;
+        int rem,rev;
+        while(n > 0)
+        {
+            rem = n % 10;
+            n = n / 10;
+            ans = ans * 10 + rem;
+        }
+        return ans;
+    }
+}
+=================== USING HELPER FUNCTION WITH RECURSION ======================
+class Main {
+
+ static int rev2(int n) {
+        // sometimes you might need some additional variables in the argument
+        // in that case, make another function
+        int digits = (int)(Math.log10(n)) + 1;
+        return helper(n, digits);
+    }
+
+    private static int helper(int n, int digits) {
+        //condition when no is single digit return the no itself
+        if (n%10 == n) {
+            return n;
+        }
+        int rem = n % 10;
+        return rem * (int)(Math.pow(10, digits-1)) + helper(n/10, digits-1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(rev2(1234));
+    }
+}
