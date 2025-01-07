@@ -8,6 +8,27 @@ SO COPY THE SAAME PREVIOUS CODE AND JUST CHECK THE CONDITION (NO == REV NO)
 1 bruteforce
 2. binary search by converting into string or array
 3. recursion
+
+==================== BRUTE FORCE ======================= 
+
+class PalindromeExample{  
+ public static void main(String args[]){  
+  int r,sum=0,temp;    
+  int n=454;//It is the number variable to be checked for palindrome  
+  
+  temp=n;    
+  while(n>0){    
+   r=n%10;  //getting remainder  
+   sum=(sum*10)+r;    
+   n=n/10;    
+  }    
+  if(temp==sum)    
+   System.out.println("palindrome number ");    
+  else    
+   System.out.println("not palindrome");    
+}  
+}  
+
 =================== USING HELPER FUNCTION WITH RECURSION ======================
 import java.util.*;
 
@@ -37,4 +58,29 @@ public class Palindrome {
 
 
 }
+
+============= USING SIMPLE RECURSION ================
+
+public class PalindromeRecursion  
+{  
+  public static void main (String[]args)  
+  {  
+    //variables initialization  
+    int num = 12021, reverse = 0, rem, temp;  
+  
+    // palindrome if num and reverse are equal  
+    if (getReverse(num, reverse) == num)  
+     System.out.println (num + " is Palindrome");  
+    else  
+      System.out.println (num + " is not Palindrome");  
+  }  
+//function to reverse the number    
+  static int getReverse(int num, int rev){  
+    if(num == 0)  
+        return rev;      
+    int rem = num % 10;  
+    rev = rev * 10 + rem;  
+    return getReverse(num / 10, rev);  
+}  
+}  
 
