@@ -1,0 +1,22 @@
+=============== BRUTE FORCE TECHQUINE ===================
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        
+       int n = 100402 ;
+       int count =  0;
+       int ans = 0 ;
+       while (n > 1)
+       {
+            ans = n % 10 ;
+            n = n/10;  
+            if(ans == 0)
+            {
+                count ++;
+            }
+       }
+       System.out.println(count);
+    }
+}
+
+OP = 3
