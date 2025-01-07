@@ -28,12 +28,13 @@ class Main {
         return helper(n, digits);
     }
 
-    private static int helper(int n, int digits) {
+    private static int helper(int n, int digits) { //this is private function
         //condition when no is single digit return the no itself
         if (n%10 == n) {
             return n;
         }
-        int rem = n % 10;
+        int rem = n % 10;     //so inside rivate helper function , we have created int rem , so rem variable would only be accessed in this helper function and not outside this
+        
         return rem * (int)(Math.pow(10, digits-1)) + helper(n/10, digits-1);
     }
 
