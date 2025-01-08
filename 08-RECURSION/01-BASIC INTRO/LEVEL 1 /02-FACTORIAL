@@ -1,5 +1,8 @@
 https://www.geeksforgeeks.org/problems/factorial5739/1
-FACTORIAL OF A NO : the product of that number with every whole number less than or equal to 'n' till 1.
+
+FACTORIAL OF A NO : the product of that number with every whole 
+number less than or equal to 'n' till 1.
+//multiplication of no with all of this smaller positive nos
 
 EXPLAINATION 
 5! = 5 * 4 * 3 * 2 * 1
@@ -13,12 +16,13 @@ EXPLAINATION
          4! = 4 * 3!
                   3! = 3 * 2!
                            2! = 2 * 1!
-                                    1! = 1
-FORMULAE => n! = n *(n-1)!
+                                    1! = 1 
+FORMULAE : n! = n * (n-1)!
+
 =================CODE FUNCTION =====================
 class Solution {
     static int fact(int n) {
-        // code here
+        // BASE CONDITION
         if (n<=1)
         {
             return 1 ;
@@ -47,7 +51,7 @@ inp = 3 | op = 6
 |------------|
 |            | 
 |------------|
-| fact(2)    | = 2* fact(1) = 2*1 = 2
+| fact(2)    | = 2 * fact(1) = 2*1 = 2
 |------------|
 | fact(3)    |
 |------------|
@@ -80,6 +84,18 @@ inp = 3 | op = 6
 |____________|
  stack memory
 
+
+
+
+
+
+
+
+
+
+
+
+
 ====================FULL CODE===================
 public class Fact {
     public static void main(String[] args) {
@@ -97,3 +113,5 @@ public class Fact {
 }
 inp = 5 | op = 120
 =======================================
+
+FORMULAE : n! = n * (n-1) * (n-2) * (n-3).... 2 * 1
