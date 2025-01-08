@@ -12,7 +12,7 @@ Step 4) 3 is odd; subtract 1 and obtain 2.
 Step 5) 2 is even; divide by 2 and obtain 1. 
 Step 6) 1 is odd; subtract 1 and obtain 0.
 
-
+=================== RECURSIVE METHORD ==================== 
 class Solution {
     // Public method that calculates the number of steps to reduce 'num' to zero
     public int numberOfSteps(int num) {
@@ -27,12 +27,38 @@ class Solution {
         // Recursive case: If the number is even, divide by 2 and increment steps
         if(num%2 == 0)
         {
-            return helper(num/2, count+1);
+            return helper(num/2, ++count);  //IMP here donot use count++ as it will give as it will return the same count valude and not update it
+            //return helper(num/2, count+1); // or give like this
         }
         // Recursive case: If the number is odd, subtract 1 and increment steps
         else
         {
-            return helper(num-1, count+1);
+            return helper(num-1, ++count);
         }
     }
 }
+
+==================== BRUTE FORCE METHORD ================
+
+class Solution {
+   
+    public int numberOfSteps(int num)
+    {
+        int count = 0;
+        while(num > 0)
+        {
+            if(num%2 == 0)
+            {
+                num = num/2;
+            }
+            else
+            {
+                num = num -1;
+            }
+            count++;
+        }
+        return count;
+    }
+}
+
+================================================================
