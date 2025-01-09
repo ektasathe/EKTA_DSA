@@ -7,12 +7,14 @@ Output 10
 Explanation: Sum of 235's digits: 2 + 3 + 5 = 10
 
 //recursive tree//
-235 = fun(23) + 5    //fun(23) will search for fun(2) + 3
-    = fun(2) + 3 + 5 //fun(2) will search for fun(2) + fun(0)
-    = 2 + 3 + 5      //fun(0) would return 0
+fun(235) = fun(23) + 5    //fun(23) will search for fun(2) + 3 
+         = fun(2)+ 3 + 5  //fun(2) would give 2
+         = 2 + 3 + 5      
 
 n = n % 10  -> will give last digit
 n = n/10 -> will give the starting digits 
+
+FORMULAE : fun(n)=fun(n%10) + n/10
 ===================== CODE SNIPPET ==========================
 class Solution {
     static int sumOfDig(int n) {
