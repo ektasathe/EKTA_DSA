@@ -96,4 +96,19 @@ static int sumOfDig(int n) {
         return ( sumOfDig(n/10) + n%10 );
     }
 }
-===============================================
+======================  BRUTE FORCE  =========================
+
+int sumOfDigits(int n) {
+        int sum=0;
+        int digit;
+        while(n!=0){
+            digit=n%10;
+            sum+=digit;
+            n=n/10;
+            
+        }
+    
+        return sum;
+
+    }
+====================== ====================== ====================== 
