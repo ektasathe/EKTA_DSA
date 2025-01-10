@@ -17,19 +17,6 @@ ans = 3
 ans = 3*10 + 8 = 30+8 = 38
 and = 38*10 + 1 = 380+1 = 381
 
-class Solution {
-    public int reverseDigits(int n) {
-        int ans = 0;
-        int rem,rev;
-        while(n > 0)
-        {
-            rem = n % 10;
-            n = n / 10;
-            ans = ans * 10 + rem;
-        }
-        return ans;
-    }
-}
 =================WITHOUT RECURSION ======================
 
 class Solution {
