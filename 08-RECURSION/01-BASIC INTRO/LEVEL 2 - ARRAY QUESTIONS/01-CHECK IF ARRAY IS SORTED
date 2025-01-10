@@ -1,0 +1,79 @@
+/
+arr = [ 3, 5, 6, 8, 9 ]
+index : 0  1  2  3  4
+
+/LOGIC/
+compare ( arr[0] <= arr[1] ) && return [ rest sorted array,index(0) ]
+when index == (arr.length-1) return true
+
+RECURSION TREE
+
+STEP 1: 
+compare ( arr[0] <= arr[1] ) && return [ rest sorted array,index(0) ]
+                3 <= 5           &&   ([5, 6, 8, 9] , 0)
+                TRUE             &&      TRUE            --------> TRUE
+
+STEP 2: 
+compare ( arr[1] <= arr[2] ) && return [ rest sorted array,index(1) ]
+                5 <= 6           &&       ([6, 8, 9] , 1)
+                TRUE             &&          TRUE         --------> TRUE
+
+step 3:
+compare ( arr[2] <= arr[3] )  && return [ rest sorted array,index(2) ]
+                6 <= 8           &&       ([8, 9] , 2)
+                TRUE             &&          TRUE        --------> TRUE
+
+step 4:
+compare ( arr[3] <= arr[4] ) && return [ rest sorted array,index(3) ]
+                6 <= 8           &&       ([9] , 3)
+                TRUE             &&           TRUE        --------> TRUE
+
+step 5:
+compare [( arr[5] <= arr[6] ) && return [ rest sorted array,index(5) ]
+                                                                | 
+                                                                V
+                                       Here index 5  == (arr.length-1) return TRUE
+                                       index(5) has has element so just return TRUE
+
+//IF INPUT ARRAY IS UNSORTED
+arr = [ 3, 5, 6, 2, 9 ]
+index : 0  1  2  3  4
+
+/LOGIC/
+compare ( arr[0] <= arr[1] ) && return [ rest sorted array,index(0) ]
+when index == (arr.length-1) return true
+
+RECURSION TREE
+
+STEP 1: 
+compare ( arr[0] <= arr[1] ) && return [ rest sorted array,index(0) ]
+                3 <= 5           &&   ([5, 6, 8, 9] , 0)
+                TRUE             &&     FLASE             --------> FALSE
+
+STEP 2: 
+compare ( arr[1] <= arr[2] ) && return [ rest sorted array,index(1) ]
+                5 <= 6           &&       ([6, 8, 9] , 1)
+                TRUE             &&          FLASE        --------> FALSE
+
+step 3:
+compare ( arr[2] <= arr[3] )  && return [ rest sorted array,index(2) ]
+                6 <= 8           &&       ([8, 9] , 2)
+                TRUE             &&        FALSE           --------> FALSE
+
+step 4:
+compare ( arr[3] <= arr[4] ) && return [ rest sorted array,index(3) ]
+                6 <= 8           &&       ([9] , 3)
+                FALSE            &&           TRUE          --------> FALSE
+
+step 5:
+compare [( arr[5] <= arr[6] ) && return [ rest sorted array,index(5) ]
+                                                                | 
+                                                                V
+                                       Here index 5  == (arr.length-1) return TRUE
+                                       index(5) has has element so just return TRUE
+
+==============================================================================================
+
+
+
+
