@@ -88,7 +88,7 @@ class Solution {
         {
             return true;
         }
-        return(arr[index] <= arr[index+1] && helper(arr,index+1));
+        return(arr[index] <= arr[index+1] && helper(arr,index+1));  //here array is not changes only the index of array is changes, this is called pass by reference value
     }
 }
 

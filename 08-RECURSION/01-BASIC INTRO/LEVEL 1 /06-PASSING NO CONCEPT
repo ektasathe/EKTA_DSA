@@ -12,7 +12,7 @@ public class Nto1 {
             return;
         }
         System.out.print(n + " ");
-        concept(n--);
+        concept(n--); 
 //        concept(--n);
 //        n-- vs --n
     }
