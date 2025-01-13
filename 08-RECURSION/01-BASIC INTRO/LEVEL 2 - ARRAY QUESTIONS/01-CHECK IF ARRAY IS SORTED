@@ -79,7 +79,7 @@ compare [( arr[5] <= arr[6] ) && return [ rest sorted array,index(5) ]
 =========================================RECURSION =====================================================
 
 class Solution {
-    public boolean arraySortedOrNot(int[] arr) {
+    public boolean arraySortedOrNot(int[] arr) { /*IMP hre main function is public boolean so our helper function can be prvate boolean */
         return helper(arr, 0) ;
     }
     private boolean helper(int[] arr,int index)

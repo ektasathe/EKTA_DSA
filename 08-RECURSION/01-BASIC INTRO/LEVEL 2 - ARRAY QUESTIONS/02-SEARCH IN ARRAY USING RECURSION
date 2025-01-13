@@ -1,0 +1,72 @@
+
+https://www.geeksforgeeks.org/problems/search-an-element-in-an-array-1587115621/0
+
+Input: arr[] = [1, 2, 3, 4], x = 3
+Output: 2
+
+================ to search from first element ==============
+class Solution {
+    static int search(int arr[], int x) {
+        // Your code here
+        return helper(arr,x,0);
+        
+    }
+    private static int helper(int arr[],int target, int index) //here main funciton is static INT so the helper function should be private static INT
+    {
+        if(index == arr.length)
+        {
+            return -1;
+        }
+        if(arr[index] == target)
+        {
+            return index;
+        }
+        else{
+            return(helper(arr,target,index+1));
+        }
+        
+    }
+}
+
+================ to search from last element ==============
+class Solution {
+    static int search(int arr[], int x) {
+        // Your code here
+        return helper(arr,x,arr.length-1);
+        
+    }
+    private static int helper(int arr[],int target, int index) //here main funciton is static INT so the helper function should be private static INT
+    {
+        if(index == -1)
+        {
+            return -1;
+        }
+        if(arr[index] == target)
+        {
+            return index;
+        }
+        else{
+            return(helper(arr,target,index-1));
+        }
+        
+    }
+}
+
+================ return true or false if the no is found or not ==============
+
+class Solution {
+    static boolean search(int arr[], int x) {
+        // Your code here
+        return helper(arr,x,0);
+        
+    }
+    private static int helper(int arr[],int target, int index) //here main funciton is static INT so the helper function should be private static INT
+    {
+        if(index == arr.length)
+        {
+            return false;
+        }
+        return (arr[index] == target) || helper(arr,target,index+1) ; //if any of the value is true , it will keep on returning the value true
+    }
+}
+
