@@ -100,9 +100,9 @@ static ArrayList<Integer> helper(int[] arr, int target, int index) {
         if (arr[index] == target) {
             list.add(index);
         }
-        ArrayList<Integer> ansFromBelowCalls = helper(arr, target, index + 1);
+        ArrayList<Integer> answer = helper(arr, target, index + 1);
 
-        list.addAll(ansFromBelowCalls);
+        list.add(answer);
 
         return list;
     }
