@@ -10,34 +10,34 @@ point one : if(arr[0index] == target)
             if ( arr[0] == 2 ) --> false  &&  base cond is not satisfied
 
 Paramaters : return ( [2,2,3,4] , 2 , 1)
-
+------------------------------------------------------------------
 Point 2 : if(arr[index] == target)
           if(arr[1] == 2) -----> true so add it in the list. &&  base cond is not satisfied
           list[index] = list[1]
 
 paramater return ([2,3,4] , 2 , 2)
-
+------------------------------------------------------------------
 Point 3 : if(arr[index] == target)
           if(arr[2] == 2) -----> true so add it in the list. &&  base cond is not satisfied
           list[index, index] = list[1,2]
 
- paramater return ([3,4] , 2 , 3)
-
+paramater return ([3,4] , 2 , 3)
+------------------------------------------------------------------
  Point 4 : if(arr[index] == target)
         if(arr[3] == 2) -----> false &&  base cond is not satisfied
 
 paramater return ([4] , 2 , 4) 
-
-
+------------------------------------------------------------------
  Point 3 : if(arr[index] == target)
            if(arr[4] == 2) -----> false
        
 paramater return ([] , 2 , 4) 
           here if(index == arr.length) //checking for base condition
                if(5 == 5 ) --> break the recursive function call
-
-
-
+------------------------------------------------------------------
+**IMP** In the function , the paramaters that we are passing are the reference variables not the actual variables
+so the new array indexes would be the same.
+------------------------------------------------------------------
 ================  USING ARRAYLIST  WAY 1 ==============
 class Solution {
     static int search(int arr[], int x) {
@@ -62,6 +62,16 @@ class Solution {
         
     }
 }
+------------------------------------------------------------------
+------------------------------------------------------------------
+------- RECURSION TREE ---------
+[1, 2, 2, 3, 4], 2, 0, [])
+[2, 2, 3, 4], 2, 1, [1])
+[2, 3, 4], 2, 2, [1,2])
+[3, 4], 2, 3, [1,2])
+[14], 2, 4, [1,2])
+[1], 2, 5, [1,2])
+------------------------------------------------------------------
 
 ================  USING ARRAYLIST  WAY 2 ==============
 class Solution {
