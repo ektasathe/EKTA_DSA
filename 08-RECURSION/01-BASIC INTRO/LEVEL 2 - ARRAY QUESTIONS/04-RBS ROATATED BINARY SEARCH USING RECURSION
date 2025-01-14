@@ -1,0 +1,54 @@
+
+[5, 6, 7, 8, 9, 1, 2, 3]
+ s        m           e
+
+** IF FIRST HALF IS SORTED **
+if(arr[s] <= arr[m]) //ie first half is sorted //if target = 7
+    if(target <= arr[m] && target >= arr[s]) //it means target lies in first half that is sorted array
+        e = m-1
+    else e = m+1
+
+** IF SECOND HALF IS SORTED **
+[6, 7, 8, 1, 2, 3, 4, 5]
+ s        m           e
+if(arr[m] <= arr[e])    
+    if(target >= arr[m] && target <= arr[e])
+        s = m+1
+    else e = m-1
+
+=====================================================================
+
+public class RBS {
+    public static void main(String[] args) {
+        int[] arr = {5, 6, 7, 8, 9, 1, 2, 3};
+        System.out.println(search(arr, 8, 0, arr.length - 1));
+    }
+    static int search(int arr, int target, int s, int e)
+    {
+        if(s>e)
+        {
+            return -1 ; //base condition 
+        }
+        int m = s + (e-s)/2;
+        if(arr[m] ==target)
+        {
+            return m;
+        }
+        if(arr[s] <= arr[m]) //ie first half is sorted //if target = 7
+        {
+            if(target <= arr[m] && target >= arr[s]) //it means target lies in first half that is sorted array
+            {
+                return (arr, target,s, m-1,)
+            }
+            else
+            {
+                return (arr, target,m+1, e,)
+            }
+        }
+        if(target <= arr[m] && target >= arr[s]) 
+        {
+            return search(arr, target, m+1, e);
+        }
+        return search(arr, target, s, m-1);
+    }
+}
