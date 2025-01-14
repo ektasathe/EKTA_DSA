@@ -34,6 +34,7 @@ paramater return ([4] , 2 , 4)
 paramater return ([] , 2 , 4) 
           here if(index == arr.length) //checking for base condition
                if(5 == 5 ) --> break the recursive function call
+
 ------------------------------------------------------------------
 **IMP** In the function , the paramaters that we are passing are the reference variables not the actual variables
 so the new array indexes would be the same.
@@ -90,8 +91,31 @@ class Solution {
         return helper(arr, target, index + 1, list);
     }
 }
-    
-================  USING ARRAYLIST  WAY 3 ==============
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+arr=[1, 2, 2, 3, 4], Target=2
+
+Step 1:
+list()
+([1, 2, 2, 3, 4], 2, 0) | arr[0] != 2 so list would be empty
+
+list()
+([2, 2, 3, 4], 2, 1))  | arr[1] == 2 so list(1)
+
+list()
+(2, 3, 4], 2, 2)  | arr[2] == 2 so list(2)
+
+list()
+([3, 4], 2, 2) | arr[3] != 2 so list()
+
+list()
+([4], 2, 2) | arr[4] != 2 so list()
+
+answerlist() = 1,2 (ie. appending of all the lists)
+
+================  USING ARRAYLIST WITHIN THE FUNCTION BUT NOT IN FUNCTION CALL ==============
+
 class Solution {
     static int search(int arr[], int x) {
         // Your code here
@@ -100,7 +124,7 @@ class Solution {
     }
 static ArrayList<Integer> helper(int[] arr, int target, int index) {
 
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>(); //HERE FOR EACH FUNCTION CALL A NEW ARRAY LIST IS CREATED 
 
         if (index == arr.length) {
             return list;
@@ -110,9 +134,9 @@ static ArrayList<Integer> helper(int[] arr, int target, int index) {
         if (arr[index] == target) {
             list.add(index);
         }
-        ArrayList<Integer> answer = helper(arr, target, index + 1);
+        ArrayList<Integer> answerlist = helper(arr, target, index + 1); //CREATING NEW ARRAYLIST TO ADD THE RESULT OF EACH INDIVIDUAL ARRAYLIST OF EACH FUNCTION CALL 
 
-        list.add(answer);
+        list.add(answerlist);
 
         return list;
     }
