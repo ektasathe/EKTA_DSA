@@ -1,0 +1,32 @@
+print below pattern
+
+* * * *   -> triangle(4,0) ,triangle(4,1) ,triangle(4,2) ,triangle(4,3) //keeping row same and incrementing the column
+* * *     -> triangle(3,0) ,triangle(4,1) ,triangle(4,2)
+* *       -> triangle(2,0) ,triangle(4,1)
+*         -> triangle(1,0) 
+          -> triangle(0,0) --> here we wil break the recursive call
+          
+while moving below we are decreasing each row count
+
+class Main {
+    public static void main(String[] args) {
+        triangle(4,0) ; /*row =4 and col=0 initially*/
+    }
+    static void triangle(int r, int c)
+    {
+        if(r==0)
+        {
+            return;
+        }
+        if(c < r) //this will print all rows one by one
+        {
+            System.out.print("* ");
+            triangle(r, c+1);
+        }
+        else  //this will move to next line and decrement the value of row by one
+        {
+            System.out.println(); 
+            triangle(r-1,0);
+        }
+    }
+}
