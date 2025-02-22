@@ -1,0 +1,45 @@
+
+INP : bapplead
+OP : bad
+
+
+          bapplead
+          |
+          v 
+[if ch == b + (applead)]    //here string doesnot starts with apple so take first char an rest of substring
+               |
+               v
+    if [ch == ' ' + (ad)] //here if string starts with 'apple' so skip 5 characters add the rest substring
+                     |
+                     v
+            if[ch == a + (d)] //here string doesnot starts with apple so take first char an rest of substring
+                          |
+                          v
+                 if[ch == d + ()] //here if condn if c == a is false so return 'c' and rest of the string
+
+ 
+
+
+//we are trying to remove "apple" substring from a given string
+class Main {
+    public static void main(String[] args) {
+      System.out.println(skip("bapplead")); //call with one arguement
+    }
+    //p= processed, up= unprocessed
+    //initially p="" is empty and up=baccad
+    static String skip(String up)
+    {
+          // Base condition: if string is empty, return empty string
+        if(up.isEmpty()){
+            return "";
+        }
+        if(up.startsWith("apple")){
+               // Skip 'apple' and continue with the rest of the string
+            return skip(up.substring(5)); //processed will be as it is and unprocessed string would be reduced 
+        }
+        else{
+                // Keep current character and process the rest of the string
+            return up.charAt(0) + skip(up.substring(1));
+        }
+    }
+}
