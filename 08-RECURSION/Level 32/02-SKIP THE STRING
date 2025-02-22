@@ -23,7 +23,7 @@ OP : bad
 //we are trying to remove "apple" substring from a given string
 class Main {
     public static void main(String[] args) {
-      System.out.println(skip("bapplead")); //call with one arguement
+      System.out.println(skipapple("bapplead")); //call with one arguement
     }
     //p= processed, up= unprocessed
     //initially p="" is empty and up=baccad
@@ -35,11 +35,11 @@ class Main {
         }
         if(up.startsWith("apple")){
                // Skip 'apple' and continue with the rest of the string
-            return skip(up.substring(5)); //processed will be as it is and unprocessed string would be reduced 
+            return skipapplea(up.substring(5)); //processed will be as it is and unprocessed string would be reduced 
         }
         else{
                 // Keep current character and process the rest of the string
-            return up.charAt(0) + skip(up.substring(1));
+            return up.charAt(0) + skippple(up.substring(1));
         }
     }
 }
