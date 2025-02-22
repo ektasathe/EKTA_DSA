@@ -1,0 +1,33 @@
+SKIP APP BUT NOT APPLE 
+INP : bdappledo
+OP : bddo 
+
+INP : bappokapple
+op : bokapple
+
+--------------------------------
+
+
+class Main {
+    public static void main(String[] args) {
+      System.out.println(skipapple("bapplead")); //call with one arguement
+    }
+    //p= processed, up= unprocessed
+    //initially p="" is empty and up=baccad
+    static String skip(String up)
+    {
+          // Base condition: if string is empty, return empty string
+        if(up.isEmpty()){
+            return "";
+        }
+        if(up.startsWith("app") && !up.startsWith("apple")){
+               // Skip 'app' and continue with the rest of the string
+            return skipapplea(up.substring(3)); // remove first 3 characters .
+        }
+        else{
+                // Keep current character and process the rest of the string
+            return up.charAt(0) + skippple(up.substring(1));
+        }
+    }
+}
+
