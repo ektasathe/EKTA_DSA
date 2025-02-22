@@ -37,7 +37,7 @@ ch = 'a' -> as we want a to be removed
             
  
 
-
+=================== USING 2 ARGUEMENTS ==================
 class Main {
     public static void main(String[] args) {
       skip("","baccad");
@@ -59,6 +59,35 @@ class Main {
         else{
             //dono skip
             skip(p+ch ,up.substring(1) );
+        }
+    }
+}
+
+============= USING ONE ARGUEMENT ===============
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+      System.out.println(skip("baccad")); //call with one arguement
+    }
+    //p= processed, up= unprocessed
+    //initially p="" is empty and up=baccad
+    static String skip(String up)
+    {
+          // Base condition: if string is empty, return empty string
+        if(up.isEmpty()){
+            return "";
+        }
+        char ch = up.charAt(0);
+        if(ch =='a'){
+               // Skip 'a' and continue with the rest of the string
+            return skip(up.substring(1)); //processed will be as it is and unprocessed string would be reduced 
+        }
+        else{
+                // Keep current character and process the rest of the string
+            return ch + skip(up.substring(1));
         }
     }
 }
