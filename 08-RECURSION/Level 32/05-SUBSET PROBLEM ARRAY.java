@@ -40,7 +40,7 @@ class Solution {
         // Exclude the first element
         List<List<Integer>> right = subseqRet(p, rest);
 
-        left.addAll(right);
+        left.addAll(right); //adding all the answers and returning the list
         return left;
     }
 
