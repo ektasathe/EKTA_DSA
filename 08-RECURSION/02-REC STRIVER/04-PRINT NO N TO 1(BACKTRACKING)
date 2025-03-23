@@ -1,0 +1,15 @@
+class Main {
+    public static void main(String[] args) {
+        fun(1);
+    }
+    static void fun(int n)
+    {
+        if(n==4)
+        {
+            return;
+        }
+        fun(n+1);  //first recursion call to reach base condition
+        System.out.print(n+" "); // Print during backtracking
+    }
+}
+ op : 3 2 1

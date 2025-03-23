@@ -1,16 +1,16 @@
 class Main {
     public static void main(String[] args) {
-        fun(3);
+        fun(1);
     }
-
-    static void fun(int n) {
-        if (n == 0) {
+    static void fun(int n)
+    {
+        if(n==4)
+        {
             return;
         }
-        System.out.print(n + " "); // Print before the recursive call
-        fun(n - 1);
+        System.out.print(n+" "); // Print before the recursive call
+        fun(n+1);
     }
 }
 
-
-op: 3 2 1 
+op : 1 2 3

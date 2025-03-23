@@ -1,3 +1,5 @@
+
+
 class Main {
     public static void main(String[] args) {
         fun(3);
@@ -13,4 +15,4 @@ class Main {
 }
 
 
-OP : 3 2 1 
+OP : 1 2 3
