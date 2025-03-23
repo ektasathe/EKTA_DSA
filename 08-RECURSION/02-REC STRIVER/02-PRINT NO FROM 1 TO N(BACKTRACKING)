@@ -16,3 +16,21 @@ class Main {
 
 
 OP : 1 2 3
+
+-----------------------------------------
+
+class Main {
+    public static void main(String[] args) {
+        fun(3);
+    }
+
+    static void fun(int n) {
+        if (n == 0) {
+            return;
+        }
+        fun(--n); // First recurse to reach the base case
+        System.out.print(n + " "); // Print during backtracking
+    }
+}
+
+Because of "fun(--n); " it will give OP : 0 1 2 

@@ -11,6 +11,7 @@ class Main {
         }
         System.out.print(n + " "); // Print before the recursive call
         fun(n - 1);
+        //fun(--n) ; this can also be used
     }
 }
 
