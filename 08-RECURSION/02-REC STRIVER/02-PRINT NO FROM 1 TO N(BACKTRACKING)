@@ -1,0 +1,16 @@
+class Main {
+    public static void main(String[] args) {
+        fun(3);
+    }
+
+    static void fun(int n) {
+        if (n == 0) {
+            return;
+        }
+        fun(n - 1); // First recurse to reach the base case
+        System.out.print(n + " "); // Print during backtracking
+    }
+}
+
+
+OP : 3 2 1 
