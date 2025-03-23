@@ -1,3 +1,5 @@
+** RECURSION : IF U WANT TO PRINT NO FROM N TO 1 USING RECURSION THEN TAKR N IN FUN CALL **
+
 class Main {
     public static void main(String[] args) {
         fun(3);

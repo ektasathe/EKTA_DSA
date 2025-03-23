@@ -1,3 +1,5 @@
+** BACKTRACKING : IF U WAN TO PRINT NO FROM N TO 1 USINF BACKTRACKING THEN TAKE 1 IN FUNCATION CALL **
+
 class Main {
     public static void main(String[] args) {
         fun(1);
